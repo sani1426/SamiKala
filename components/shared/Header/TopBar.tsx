@@ -15,7 +15,7 @@ const TopBar = () => {
             <LuInstagram className="h-6 w-6" />
         </a>
         <a href="/" className="hover:text-gray-300 transition-all duration-300">
-            <RiTwitterXLine className="h-4 w-5" />
+            <RiTwitterXLine className="h-5 w-5" />
         </a>
         </div>
 
