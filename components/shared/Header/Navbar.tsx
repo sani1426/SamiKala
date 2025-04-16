@@ -28,18 +28,17 @@ const Navbar = () => {
         <div className='flex items-center gap-4'>
           <ModeToggle />
 
-          <Button>
+          <Button className='text-xl'>
             <Link
               href='/profile'
-              className='hover:text-primary transition-all duration-500'
             >
               <HiOutlineUserCircle className='h-7 w-7 text-xl' />
             </Link>
           </Button>
-          <Button>
+          <Button className='text-xl'>
             <HiOutlineShoppingBag className='text-xl h-7 w-7' />
           </Button>
-          <Button className='md:hidden'>
+          <Button className='md:hidden text-xl'>
             <HiBars4 className='h-7 w-7 text-2xl' />
           </Button>
         </div>
