@@ -16,7 +16,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className='hidden md:flex items-center gap-4'>
+        <div className='hidden md:flex items-center gap-1'>
           <Link
             className='text-sm rounded-lg text-gray-700 hover:bg-primary px-4 py-2 dark:text-slate-100 transition-all duration-500'
             href='/wear'
@@ -44,9 +44,9 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-4'>
-          <Button>
+       
           <ModeToggle />
-          </Button>
+       
           <Button>
           <Link
             href='/profile'
