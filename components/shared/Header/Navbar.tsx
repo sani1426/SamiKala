@@ -52,14 +52,14 @@ const Navbar = () => {
             href='/profile'
             className='hover:text-primary transition-all duration-500'
           >
-            <HiOutlineUserCircle className='h-7 w-7' />
+            <HiOutlineUserCircle className='h-7 w-7 text-xl' />
           </Link>
           </Button>
           <Button>
-            <HiOutlineShoppingBag className='h-7 w-7' />
+            <HiOutlineShoppingBag className='text-xl h-7 w-7' />
           </Button>
           <Button className='md:hidden'>
-            <HiBars4 className='h-7 w-7' />
+            <HiBars4 className='h-7 w-7 text-2xl' />
           </Button>
 
         </div>
