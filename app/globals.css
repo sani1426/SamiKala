@@ -93,6 +93,11 @@
   color: white;
 }
 
+.dark{
+background-color: black;
+color: white;
+}
+
 .dark .primary{
   background-color: #6D28D9;
   color: #f6f8fdda ;
