@@ -92,3 +92,8 @@
   background-color: #7C3AED;
   color: white;
 }
+
+.dark .primary{
+  background-color: #6D28D9;
+  color: #f6f8fdda ;
+}
