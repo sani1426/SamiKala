@@ -10,6 +10,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	container: {
+		center: true,
+		padding: '2rem',
+		screens: {
+		  '2xl': '1400px',
+		},
+	  },
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -19,6 +26,18 @@ module.exports = {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+			  primary: {
+				500: '#7C3AED',
+				50: ' #F6F8FD',
+			  },
+			  coral: {
+				500: '#15BF59',
+			  },
+			  grey: {
+				600: '#545454',
+				500: '#757575',
+				400: '#AFAFAF',
+			  },
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'

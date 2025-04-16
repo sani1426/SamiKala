@@ -69,3 +69,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
+
