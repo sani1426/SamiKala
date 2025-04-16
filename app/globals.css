@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: beirut;
+  src: url(../public/beiruty/static/Beiruti-Medium.ttf)format(truetype);
+  src: url(../public/beiruty/static/Beiruti-Bold.ttf)format(truetype);
+  src: url(../public/beiruty/static/Beiruti-SemiBold.ttf)format(truetype);
+  src: url(../public/beiruty/static/Beiruti-Light.ttf)format(truetype);
+}
+
 
 @layer base {
   :root {
     --background: 0 0% 100%;
     --primary-500: #7C3AED;
+    --font-beyrut : beirut
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -86,6 +95,11 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
+
+}
+
+.font-beirut{
+  font-family: beirut;
 }
 
 .primary{
