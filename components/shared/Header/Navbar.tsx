@@ -16,46 +16,48 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className='hidden md:flex items-center space-x-6'>
+        <div className='hidden md:flex items-center gap-6'>
           <Link
-            className='text-sm text-gray-700 hover:text-primary dark:text-slate-100 transition-all duration-500'
+            className='text-sm text-gray-700 hover:bg-primary px-4 py-2 dark:text-slate-100 transition-all duration-500'
             href='/wear'
           >
             پوشاک
           </Link>
           <Link
-            className='text-sm text-gray-700 hover:text-primary dark:text-slate-100 transition-all duration-500'
+            className='text-sm text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
             href='/laptop'
           >
             لپتاپ
           </Link>
           <Link
-            className='text-sm text-gray-700 hover:text-primary dark:text-slate-100 transition-all duration-500'
+            className='text-sm text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
             href='/tools'
           >
             ابزار
           </Link>
           <Link
-            className='text-sm text-gray-700 hover:text-primary dark:text-slate-100 transition-all duration-500'
+            className='text-sm text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
             href='/mobile'
           >
             موبایل
           </Link>
         </div>
 
-        <div className='flex items-center space-x-4'>
+        <div className='flex items-center gap-4'>
           <ModeToggle />
+          <Button>
           <Link
             href='/profile'
             className='hover:text-primary transition-all duration-500'
           >
-            <HiOutlineUserCircle className='h-6 w-6' />
+            <HiOutlineUserCircle className='h-7 w-7' />
           </Link>
+          </Button>
           <Button>
-            <HiOutlineShoppingBag className='h-6 w-6' />
+            <HiOutlineShoppingBag className='h-7 w-7' />
           </Button>
           <Button className='md:hidden'>
-            <HiBars4 className='h-6 w-6' />
+            <HiBars4 className='h-7 w-7' />
           </Button>
 
         </div>
