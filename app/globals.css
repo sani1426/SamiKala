@@ -6,6 +6,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --primary-500: #7C3AED;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -87,6 +88,7 @@
   }
 }
 
-.d{
-  background-color: 224 71.4% 4.1%;
+.primary{
+  background-color: #7C3AED;
+  color: white;
 }
