@@ -1,5 +1,5 @@
 import Header from '@/components/shared/Header/Header'
-import './globals.css'
+
 
 export default function RootLayout({
   children,
