@@ -22,7 +22,7 @@ const TopBar = () => {
         </div>
 
         <div className="text-sm text-center ">
-        <span className="font-beirut" >ارسال به سراسر کشور - ارسال سریع و قابل اعتماد</span>
+        <span className="font-beirut text-xl" >ارسال به سراسر کشور - ارسال سریع و قابل اعتماد</span>
         </div>
         <div className="text-sm hidden md:block">
             <a href="tel:09914318174" className="hover:text-gray-300 transition-all duration-300">09914318174</a>
