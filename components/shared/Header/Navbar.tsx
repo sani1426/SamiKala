@@ -12,31 +12,31 @@ const Navbar = () => {
         <div>
           <Link className='text-2xl flex-center gap-2 text-primary' href='/'>
             <IoLogoAlipay />
-            <span className='font-beirut text-2xl font-bold'>سامی کالا</span>
+            <span className='font-beirut text-3xl font-bold'>سامی کالا</span>
           </Link>
         </div>
 
-        <div className='hidden md:flex items-center gap-6'>
+        <div className='hidden md:flex items-center gap-4'>
           <Link
-            className='text-sm text-gray-700 hover:bg-primary px-4 py-2 dark:text-slate-100 transition-all duration-500'
+            className='text-sm rounded-lg text-gray-700 hover:bg-primary px-4 py-2 dark:text-slate-100 transition-all duration-500'
             href='/wear'
           >
             پوشاک
           </Link>
           <Link
-            className='text-sm text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
+            className='text-sm rounded-lg text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
             href='/laptop'
           >
             لپتاپ
           </Link>
           <Link
-            className='text-sm text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
+            className='text-sm rounded-lg text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
             href='/tools'
           >
             ابزار
           </Link>
           <Link
-            className='text-sm text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
+            className='text-sm rounded-lg text-gray-700 hover:bg-primary px-4 py-2  dark:text-slate-100 transition-all duration-500'
             href='/mobile'
           >
             موبایل
@@ -44,7 +44,9 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-4'>
+          <Button>
           <ModeToggle />
+          </Button>
           <Button>
           <Link
             href='/profile'
