@@ -31,6 +31,15 @@ const CartContents = () => {
       price: 1900,
       image: 'https://picsum.photos/200?random=1',
     },
+    {
+      productId: 4,
+      name: 'monitor',
+      screen: 21,
+      color: 'silver',
+      quantity: 2,
+      price: 1900,
+      image: 'https://picsum.photos/200?random=1',
+    },
   ]
 
   return (
@@ -38,7 +47,7 @@ const CartContents = () => {
       {cartItem.map((item) => (
         <div
           key={item.productId}
-          className='flex items-start justify-between py-4 border-b'
+          className='flex items-start justify-between py-4 border-b px-2'
         >
           <div className='flex  items-start'>
             <img
@@ -47,7 +56,7 @@ const CartContents = () => {
               className='object-cover mr-4 rounded w-24 h-24'
             />
             <div>
-              <h3>{item.name}</h3>
+              <h2 className='text-2xl'>{item.name}</h2>
               <p className='text-sm text-slate-700 dark:text-slate-300'>
                 screen : {item.screen} | color : {item.color}
               </p>
@@ -62,7 +71,7 @@ const CartContents = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className='flex flex-col gap-6'>
             <p>$ {item.price.toLocaleString()}</p>
             <Button variant={'destructive'} >
                 <RiDeleteBin3Line className='w-6 h-6 mt-2' />
