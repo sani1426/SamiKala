@@ -6,8 +6,9 @@ import {
   HiBars4,
 } from 'react-icons/hi2'
 import { Button } from '@/components/ui/button'
-import { ModeToggle } from './ThemeToogle'
+
 import NavItem from './NavItem'
+import SearchBar from './SearchBar'
 
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-4'>
-          <ModeToggle />
+         
 
           <Button className='text-xl'>
             <Link
@@ -38,6 +39,7 @@ const Navbar = () => {
           <Button className='text-xl'>
             <HiOutlineShoppingBag className='text-xl h-7 w-7' />
           </Button>
+          <SearchBar />
           <Button className='md:hidden text-xl'>
             <HiBars4 className='h-7 w-7 text-2xl' />
           </Button>
