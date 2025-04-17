@@ -19,7 +19,7 @@ const SearchBar = () => {
       }`}
     >
       {isOpen ? (
-        <form className='flex-center relative w-full bg-whit text-black dark:bg-slate-800 dark:bg-slate-100'>
+        <form className='flex-center relative w-full bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
           <div className='relative w-1/2'>
             <input
               onChange={(e) => setSearchTerm(e.target.value)}
