@@ -21,8 +21,8 @@ const CartDrawer = () => {
                 <IoMdClose className="h-6 w-6 text-gray-600 hover:text-red-600 dark:text-slate-100 dark:hover:text-red-600" />
             </button>
         </div>
-        <div className="flex-grow p-4  ">
-          <h2 className=" font-semibold mb-4 text-center font-beirut text-2xl">سبد خرید</h2>
+        <div className="flex-grow pt-2  ">
+          <h2 className=" font-semibold mb-1 text-center font-beirut text-2xl">سبد خرید</h2>
         </div>
         <CartContents />
         <div className="p-4 sticky bottom-0">

@@ -47,7 +47,7 @@ const CartContents = () => {
       {cartItem.map((item) => (
         <div
           key={item.productId}
-          className='flex items-start justify-between py-4 border-b dark:border-b-slate-200 px-2'
+          className='flex items-start justify-between py-4 border-b dark:border-b-slate-200 pl-2 pr-5'
         >
           <div className='flex  items-start'>
             <img
@@ -73,9 +73,9 @@ const CartContents = () => {
           </div>
           <div className='flex flex-col gap-6'>
             <p>$ {item.price.toLocaleString()}</p>
-            <button className='text-red-700' >
+            <Button className='flex-center' variant={'destructive'} >
                 <RiDeleteBin3Line className='w-6 h-6 mt-2' />
-            </button>
+            </Button>
           </div>
         </div>
       ))}
