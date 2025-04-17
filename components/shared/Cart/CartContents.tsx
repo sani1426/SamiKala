@@ -47,7 +47,7 @@ const CartContents = () => {
       {cartItem.map((item) => (
         <div
           key={item.productId}
-          className='flex items-start justify-between py-4 border-b px-2'
+          className='flex items-start justify-between py-4 border-b dark:border-b-slate-200 px-2'
         >
           <div className='flex  items-start'>
             <img
@@ -57,7 +57,7 @@ const CartContents = () => {
             />
             <div>
               <h2 className='text-2xl'>{item.name}</h2>
-              <p className='text-sm text-slate-700 dark:text-slate-300'>
+              <p className='text-sm text-slate-700 dark:text-slate-400'>
                 screen : {item.screen} | color : {item.color}
               </p>
               <div className='flex items-center mt-2'>
