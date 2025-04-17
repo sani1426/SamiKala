@@ -13,7 +13,7 @@ const NavItem = () => {
             return (
               <Link
                 key={link.id}
-                className={`${pathname === link.href ? 'bg-primary text-white' :''} text-sm rounded-xl text-gray-700 hover:bg-primary px-4 py-2 dark:text-slate-100 transition-all duration-500`}
+                className={`${pathname === link.href ? 'bg-primary text-slate-200' :''} text-sm rounded-xl text-gray-700 hover:bg-primary px-4 py-2 dark:text-slate-200 transition-all duration-500`}
                 href={link.href}
               >
                 {link.label}
