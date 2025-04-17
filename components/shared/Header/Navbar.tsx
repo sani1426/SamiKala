@@ -2,8 +2,6 @@ import Link from 'next/link'
 import { IoLogoAlipay } from 'react-icons/io5'
 import {
   HiOutlineUserCircle,
-  HiOutlineShoppingBag,
-  HiBars4,
 } from 'react-icons/hi2'
 import { Button } from '@/components/ui/button'
 
@@ -11,13 +9,14 @@ import NavItem from './NavItem'
 import SearchBar from './SearchBar'
 import { ModeToggle } from './ThemeToogle'
 import CartDrawer from '../Cart/CartDrawer'
-import CartIcon from '../Cart/CartIcon'
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import NavIcon from '../Cart/navIcon'
 
 
 const Navbar = () => {
@@ -55,14 +54,12 @@ const Navbar = () => {
       </Tooltip>
     </TooltipProvider>
        
-         <CartIcon />
+         
           <div className="overflow-hidden">
           <SearchBar />
           </div>
-          
-          <Button className='md:hidden text-xl'>
-            <HiBars4 className='h-7 w-7 text-2xl' />
-          </Button>
+          <NavIcon />
+        
         </div>
       </nav>
       <CartDrawer />
