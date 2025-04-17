@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { CartContextType, useCartContext } from "@/context/CartContext"
 import { IoMdClose } from "react-icons/io"
+import CartContents from "./CartContents"
 
 
 const CartDrawer = () => {
@@ -21,8 +22,9 @@ const CartDrawer = () => {
             </button>
         </div>
         <div className="flex-grow p-4 overflow-y-auto ">
-          <h2 className="text-xl font-semibold mb-4 text-center">سبد خرید</h2>
+          <h2 className=" font-semibold mb-4 text-center font-beirut text-2xl">سبد خرید</h2>
         </div>
+        <CartContents />
         <div className="p-4 sticky bottom-0">
           <Button  className="w-full py-3 rounded-lg font-semibold">پرداخت</Button>
         </div>
