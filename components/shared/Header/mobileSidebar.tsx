@@ -2,6 +2,7 @@
 
 import { CartContextType, useCartContext } from "@/context/CartContext"
 import {IoMdClose} from "react-icons/io"
+import NavItem from "./NavItem"
 
 
 
@@ -14,6 +15,13 @@ const MobileSidebar = () => {
             <button onClick={toggleSidebar}>
                 <IoMdClose className="h-6 w-6  hover:text-red-600 transition-all" />
             </button>
+        </div>
+        <div className="p-4">
+            <h2 className="text-2xl font-semibold mb-4 font-beirut">منو</h2>
+
+            <nav>
+                <NavItem />
+            </nav>
         </div>
     </div>
   )
