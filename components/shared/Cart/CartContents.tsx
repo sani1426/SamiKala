@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+
 import { RiDeleteBin3Line } from "react-icons/ri";
 
 const CartContents = () => {
@@ -41,12 +41,10 @@ const CartContents = () => {
           className='flex items-start justify-between py-4 border-b'
         >
           <div className='flex  items-start'>
-            <Image
+            <img
               alt='item.name'
               src={item.image}
-              width={96}
-              height={96}
-              className='object-cover mr-4 rounded'
+              className='object-cover mr-4 rounded w-24 h-24'
             />
             <div>
               <h3>{item.name}</h3>
