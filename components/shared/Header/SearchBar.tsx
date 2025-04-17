@@ -12,8 +12,11 @@ const SearchBar = () => {
     setIsOpen(!isOpen)
   }
 
-  const handleSubmit=() => {
-    
+  const handleSubmit=(e : React.FormEvent<HTMLFormElement>) => {
+e.preventDefault()
+console.log(searchTerm);
+setIsOpen(false)
+
   }
 
   return (
@@ -24,7 +27,7 @@ const SearchBar = () => {
     >
       {isOpen ? (
         <form
-        onSubmit={handleSubmit}
+        onSubmit={(e)=>handleSubmit(e)}
          className='flex-center relative w-full bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
           <div className='relative w-1/2 bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
             <input
