@@ -17,6 +17,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import NavIcon from '../Cart/navIcon'
+import MobileSidebar from './mobileSidebar'
 
 
 const Navbar = () => {
@@ -63,6 +64,8 @@ const Navbar = () => {
         </div>
       </nav>
       <CartDrawer />
+
+      <MobileSidebar />
     </>
   )
 }
