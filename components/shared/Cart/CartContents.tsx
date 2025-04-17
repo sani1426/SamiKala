@@ -34,7 +34,7 @@ const CartContents = () => {
   ]
 
   return (
-    <div>
+    <div dir='ltr'>
       {cartItem.map((item) => (
         <div
           key={item.productId}
