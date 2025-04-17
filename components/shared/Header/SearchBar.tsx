@@ -20,7 +20,7 @@ const SearchBar = () => {
     {isOpen ? (
         <form className="flex-center relative w-full" >
         <div className="relative w-1/2">
-          <input onChange={()=> setSearchTerm(e.target.value)} type="text" placeholder="سرچ کنید" value={searchTerm} className="bg-gray-100 px-4 py-2 pl-2 pr-12 rounded-lg focus:outline-none w-full placeholder:text-gray-700" />
+          <input onChange={(e)=> setSearchTerm(e.target.value)} type="text" placeholder="سرچ کنید" value={searchTerm} className="bg-gray-100 px-4 py-2 pl-2 pr-12 rounded-lg focus:outline-none w-full placeholder:text-gray-700" />
           <button type="submit" className="absolute  left-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-800">
             <HiMagnifyingGlass className="w-6 h-6" />
           </button>
