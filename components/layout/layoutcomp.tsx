@@ -1,28 +1,23 @@
-"use client"
+'use client'
 
-import { ThemeProvider } from "./theme-provider";
-
-
-
-
-
+import { CartContextProvider } from '@/context/CartContext'
+import { ThemeProvider } from './theme-provider'
 
 const Layoutcomponent = ({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) => {
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) => {
   return (
     <>
-     <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            // disableTransitionOnChange
-            
-          >
-    {children}
-    </ThemeProvider>
+      <ThemeProvider
+        attribute='class'
+        defaultTheme='system'
+        enableSystem
+        // disableTransitionOnChange
+      >
+        <CartContextProvider>{children}</CartContextProvider>
+      </ThemeProvider>
     </>
   )
 }

@@ -10,6 +10,8 @@ import { Button } from '@/components/ui/button'
 import NavItem from './NavItem'
 import SearchBar from './SearchBar'
 import { ModeToggle } from './ThemeToogle'
+import CartDrawer from '../Cart/CartDrawer'
+import CartIcon from '../Cart/CartIcon'
 
 
 const Navbar = () => {
@@ -37,9 +39,7 @@ const Navbar = () => {
               <HiOutlineUserCircle className='h-7 w-7 text-xl' />
             </Link>
           </Button>
-          <Button className='text-xl'>
-            <HiOutlineShoppingBag className='text-xl h-7 w-7' />
-          </Button>
+         <CartIcon />
           <div className="overflow-hidden">
           <SearchBar />
           </div>
@@ -49,6 +49,7 @@ const Navbar = () => {
           </Button>
         </div>
       </nav>
+      <CartDrawer />
     </>
   )
 }
