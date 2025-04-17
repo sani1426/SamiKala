@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 
 import NavItem from './NavItem'
 import SearchBar from './SearchBar'
+import { ModeToggle } from './ThemeToogle'
 
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-4'>
-         
+         <ModeToggle />
 
           <Button className='text-xl'>
             <Link
