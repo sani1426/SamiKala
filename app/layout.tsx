@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='fa' dir='rtl'>
+    <html lang='fa' dir='rtl' className='page-transition'>
       <body className={myFont.className}>
         <Layoutcomponent>{children}</Layoutcomponent>
       </body>

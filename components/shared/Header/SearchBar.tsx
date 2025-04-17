@@ -12,6 +12,10 @@ const SearchBar = () => {
     setIsOpen(!isOpen)
   }
 
+  const handleSubmit=() => {
+    
+  }
+
   return (
     <div
       className={`flex-center w-full transition-all duration-300 ${
@@ -19,7 +23,9 @@ const SearchBar = () => {
       }`}
     >
       {isOpen ? (
-        <form className='flex-center relative w-full bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
+        <form
+        onSubmit={handleSubmit}
+         className='flex-center relative w-full bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
           <div className='relative w-1/2 bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
             <input
               onChange={(e) => setSearchTerm(e.target.value)}

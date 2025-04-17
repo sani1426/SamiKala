@@ -19,6 +19,7 @@ const Layoutcomponent = ({
             defaultTheme="system"
             enableSystem
             // disableTransitionOnChange
+            
           >
     {children}
     </ThemeProvider>
