@@ -12,6 +12,12 @@ import SearchBar from './SearchBar'
 import { ModeToggle } from './ThemeToogle'
 import CartDrawer from '../Cart/CartDrawer'
 import CartIcon from '../Cart/CartIcon'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 
 const Navbar = () => {
@@ -32,13 +38,23 @@ const Navbar = () => {
         <div className='flex items-center gap-4'>
          <ModeToggle />
 
-          <Button className='text-xl'>
+         <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+        <Button className='text-xl'>
             <Link
               href='/profile'
             >
               <HiOutlineUserCircle className='h-7 w-7 text-xl' />
             </Link>
           </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>ثبت نام</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+       
          <CartIcon />
           <div className="overflow-hidden">
           <SearchBar />

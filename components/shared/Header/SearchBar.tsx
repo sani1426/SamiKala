@@ -4,6 +4,12 @@ import { Button } from '@/components/ui/button'
 import { useState } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 import { HiMiniXMark } from 'react-icons/hi2'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -56,9 +62,19 @@ const SearchBar = () => {
           </button>
         </form>
       ) : (
-        <Button onClick={handleSearchToggle}>
+        <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+          <Button onClick={handleSearchToggle}>
           <HiMagnifyingGlass className='h-6 w-6' />
         </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>جستجو</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+       
       )}
     </div>
   )
