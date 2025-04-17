@@ -43,7 +43,7 @@ const CartContents = () => {
   ]
 
   return (
-    <div dir='ltr'>
+    <div className='overflow-y-auto' dir='ltr'>
       {cartItem.map((item) => (
         <div
           key={item.productId}
