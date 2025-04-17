@@ -19,7 +19,7 @@ const MobileSidebar = () => {
         <div className="p-4">
             <h2 className="text-2xl font-semibold mb-4 font-beirut">منو</h2>
 
-            <nav>
+            <nav className="flex flex-col justify-start gap-3">
                 <NavItem />
             </nav>
         </div>
