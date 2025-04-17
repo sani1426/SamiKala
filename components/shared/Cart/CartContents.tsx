@@ -73,9 +73,9 @@ const CartContents = () => {
           </div>
           <div className='flex flex-col gap-6'>
             <p>$ {item.price.toLocaleString()}</p>
-            <Button variant={'destructive'} >
+            <button className='text-red-700' >
                 <RiDeleteBin3Line className='w-6 h-6 mt-2' />
-            </Button>
+            </button>
           </div>
         </div>
       ))}
