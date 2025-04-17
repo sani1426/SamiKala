@@ -6,7 +6,7 @@ import TopBar from "./TopBar"
 
 const Header = () => {
   return (
-    <header>
+    <header className="border-b border-b-gray-700 dark:border-b-slate-200">
     <TopBar />
     <Navbar />
     </header>
