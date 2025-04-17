@@ -40,7 +40,10 @@ const Navbar = () => {
           <Button className='text-xl'>
             <HiOutlineShoppingBag className='text-xl h-7 w-7' />
           </Button>
+          <div className="overflow-hidden">
           <SearchBar />
+          </div>
+          
           <Button className='md:hidden text-xl'>
             <HiBars4 className='h-7 w-7 text-2xl' />
           </Button>
