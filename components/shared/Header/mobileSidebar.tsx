@@ -11,7 +11,7 @@ const MobileSidebar = () => {
   return (
     <div className={` sidebar-mobile ${sidebarOpen ? "translate-x-0" : "translate-x-full"}` }>
         <div className="flex justify-end p-4">
-            <button>
+            <button onClick={toggleSidebar}>
                 <IoMdClose className="h-6 w-6  hover:text-red-600 transition-all" />
             </button>
         </div>
