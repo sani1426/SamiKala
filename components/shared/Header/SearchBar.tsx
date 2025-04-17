@@ -20,7 +20,7 @@ const SearchBar = () => {
     >
       {isOpen ? (
         <form className='flex-center relative w-full bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
-          <div className='relative w-1/2'>
+          <div className='relative w-1/2 bg-whit text-black dark:bg-slate-800 dark:text-slate-100'>
             <input
               onChange={(e) => setSearchTerm(e.target.value)}
               type='text'
@@ -30,14 +30,14 @@ const SearchBar = () => {
             />
             <button
               type='submit'
-              className='absolute  left-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-800'
+              className='absolute  left-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-green-600 dark:text-gray-200 dark:hover:text-green-600 transition-all duration-300'
             >
               <HiMagnifyingGlass className='w-6 h-6' />
             </button>
           </div>
           <button
             type='button'
-            className='right-4 top-1/2 transform translate-y-1/2 text-gray-600 hover:text-gray-800'
+            className='right-4 top-1/2  text-gray-600 hover:text-red-600 dark:text-gray-100 dark:hover:text-red-600 transition-all duration-300'
             onClick={() => setIsOpen(false)}
           >
             <HiMiniXMark className='w-6 h-6' />
