@@ -15,7 +15,7 @@ const SearchBar = () => {
   return (
     <div
       className={`flex-center w-full transition-all duration-300 ${
-        isOpen ? 'absolute top-0 right-0  w-full bg-white h-24 z-50' : 'w-auto'
+        isOpen ? 'absolute top-0 right-0  w-full bg-white h-24 z-50 bg-whit text-black dark:bg-slate-800 dark:text-slate-100' : 'w-auto'
       }`}
     >
       {isOpen ? (
@@ -37,7 +37,7 @@ const SearchBar = () => {
           </div>
           <button
             type='button'
-            className='right-4 top-1/2  text-gray-600 hover:text-red-600 dark:text-gray-100 dark:hover:text-red-600 transition-all duration-300'
+            className='left-4 top-1/2  text-gray-600 hover:text-red-600 dark:text-gray-100 dark:hover:text-red-600 transition-all duration-300'
             onClick={() => setIsOpen(false)}
           >
             <HiMiniXMark className='w-6 h-6' />
