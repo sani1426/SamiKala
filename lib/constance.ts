@@ -15,7 +15,7 @@ export   const cartItem = [
       color: 'black',
       quantity: 1,
       price: 1500,
-      image: 'https://picsum.photos/200?random=1',
+      image: 'https://picsum.photos/id/1/200?random=1',
     },
     {
       productId: 2,
@@ -24,7 +24,7 @@ export   const cartItem = [
       color: 'gold',
       quantity: 3,
       price: 2100,
-      image: 'https://picsum.photos/200?random=1',
+      image: 'https://picsum.photos/id/2/200?random=1',
     },
     {
       productId: 3,
@@ -33,7 +33,7 @@ export   const cartItem = [
       color: 'silver',
       quantity: 2,
       price: 1900,
-      image: 'https://picsum.photos/200?random=1',
+      image: 'https://picsum.photos/id/3/200?random=1',
     },
     {
       productId: 4,
@@ -42,7 +42,7 @@ export   const cartItem = [
       color: 'silver',
       quantity: 2,
       price: 1900,
-      image: 'https://picsum.photos/200?random=1',
+      image: 'https://picsum.photos/id/347/200?random=1',
     },
     {
       productId: 5,
@@ -51,7 +51,7 @@ export   const cartItem = [
       color: 'silver',
       quantity: 2,
       price: 1900,
-      image: 'https://picsum.photos/200?random=1',
+      image: 'https://picsum.photos/id/32/200?random=1',
     },
     {
       productId: 6,
@@ -60,7 +60,7 @@ export   const cartItem = [
       color: 'silver',
       quantity: 2,
       price: 1900,
-      image: 'https://picsum.photos/200?random=1',
+      image: 'https://picsum.photos/id/21/200?random=1',
     },
     {
       productId: 4,
