@@ -14,15 +14,14 @@ const CartDrawer = () => {
 
   return (
     <div className={`cart-drawer  ${drawerOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <div className="flex justify-end p-4">
+        <div className="flex-between p-4">
 
          { /* {close button} */}
             <button onClick={toggleDrawer} >
                 <IoMdClose className="h-6 w-6 text-gray-600 hover:text-red-600 dark:text-slate-100 dark:hover:text-red-600" />
             </button>
-        </div>
-        <div className="flex-grow pt-2  ">
-          <h2 className=" font-semibold mb-1 text-center font-beirut text-2xl">سبد خرید</h2>
+       
+          <h2 className=" font-semibold mb-1 text-center font-beirut text-3xl">سبد خرید</h2>
         </div>
         <CartContents />
         <div className="p-4 sticky bottom-0">
