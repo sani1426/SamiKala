@@ -31,32 +31,42 @@ const Footer = () => {
           </form>
         </div>
 
-        <div className='my-auto'>
-          <h3 className='text-xl text-center text-gray-800 mb-4 dark:text-gray-300'>
-            فروشگاه
+     
+        <div className=''>
+          <h3 className='text-xl  text-gray-800 mb-4 dark:text-gray-300'>
+            با سامی کالا
           </h3>
           <ul className='flex flex-col gap-4 text-gray-600 dark:text-gray-400'>
             <li>
-              <Link href='/' className=''></Link>
+              <Link href='/' className=''>فرصت های شغلی</Link>
+            </li>
+            <li>
+              <Link href='/' className=''>فروش در سامی کالا</Link>
+            </li>
+            <li>
+              <Link href='/' className=''>گزارش تخلف</Link>
+            </li>
+            <li>
+              <Link href='/' className=''>اتاق خبر سامی کالا</Link>
             </li>
           </ul>
         </div>
+
         <div className=''>
           <h3 className='text-xl  text-gray-800 mb-4 dark:text-gray-300'>
-            فروشگاه
-          </h3>
+            پشتیبانی      </h3>
           <ul className='flex flex-col gap-4 text-gray-600 dark:text-gray-400'>
             <li>
-              <Link href='/' className=''>لباس مردانه</Link>
+              <Link href='/' className=''>درباره ما</Link>
             </li>
             <li>
-              <Link href='/' className=''>لباس زنانه</Link>
+              <Link href='/' className=''>تماس با ما</Link>
             </li>
             <li>
-              <Link href='/' className=''>لوازم جانبی کامپیوتر</Link>
+              <Link href='/' className=''>حریم خصوصی</Link>
             </li>
             <li>
-              <Link href='/' className=''>لوازم جانبی موبایل</Link>
+              <Link href='/' className=''>سوالات متداول</Link>
             </li>
           </ul>
         </div>
