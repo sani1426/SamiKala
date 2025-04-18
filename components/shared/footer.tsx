@@ -88,16 +88,19 @@ const Footer = () => {
                     <RiTwitterXFill className='w-6 h-6' />
                 </a>
             </div>
-            <p>با ما تماس بگیرید.</p>
-            <p>
+            <p className='mb-3'>با ما تماس بگیرید.</p>
+            <p className='flex items-center gap-2 justify-start'>
             <FiPhoneCall className="w-6 h-6 inline-block mr-2" />
+            <span>
             0991-431-8174
+            </span>
+           
             </p>
             
         </div>
       </div>
       <div className="container mx-auto mt-12 px-5 lg:px-0 pt-3  border-t border-t-slate-800 dark:border-t-slate-200">
-        <p className='text-sm tracking-tighter text-center text-gray-600 dark:text-gray-400'>طراحی و برنامه نویسی با ❤ توسط سامان کریمی</p>
+        <p className='text-sm tracking-tighter text-center text-gray-600 dark:text-gray-400'> {' '}طراحی و برنامه نویسی با ❤ {' '} توسط سامان کریمی </p>
       </div>
     </footer>
   )
