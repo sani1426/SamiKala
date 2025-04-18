@@ -7,7 +7,7 @@ export interface CartContextType {
     toggleDrawer : () => void;
     sidebarOpen : boolean;
     toggleSidebar : () => void;
-
+    setSidebarOpen: (property : boolean) => void;
 }
 
 const CartContext = createContext<CartContextType | null>(null)
@@ -22,7 +22,7 @@ export const CartContextProvider = ({children} : { children : React.ReactNode })
 
 
     return (
-        <CartContext.Provider value={{drawerOpen , toggleDrawer , sidebarOpen , toggleSidebar}}>
+        <CartContext.Provider value={{drawerOpen , toggleDrawer , sidebarOpen , toggleSidebar , setSidebarOpen}}>
             {children}
         </CartContext.Provider>
 
