@@ -17,7 +17,7 @@ const HeroComponents = () => {
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="p-1 w-full h-screen">
+            <div className="p-1 w-screen h-screen">
             <Image src="/images/rabbit-hero.webp" alt="hero_image" fill />
             </div>
           </CarouselItem>
