@@ -39,11 +39,11 @@ export function HomeCarousel() {
                   className='object-cover'
                   priority
                 />
-                <div dir='rtl' className='absolute w-1/3 left-16 md:left-32 top-1/2 transform -translate-y-1/2 text-right'>
+                <div dir='rtl' className='absolute w-1/3 left-14 md:left-32 top-1/2 transform -translate-y-1/2 text-right'>
                   <h2 className='text-2xl md:text-7xl font-beirut font-bold mb-4 text-primary whitespace-nowrap'>
                     {item.title}
                   </h2>
-                  <Button className='text-xl px-4 py-2 mt-2'>
+                  <Button className='text-xl px-6 py-3 mt-2'>
                     {item.buttonCaption}
                   </Button>
                 </div>
