@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { IoLogoAlipay } from 'react-icons/io5'
 
 const MobileSidebar = () => {
-  const { sidebarOpen, toggleSidebar } = useCartContext() as CartContextType
+  const { sidebarOpen, toggleSidebar , setSidebarOpen } = useCartContext() as CartContextType
   return (
     <div
       className={` sidebar-mobile ${
@@ -15,7 +15,9 @@ const MobileSidebar = () => {
       }`}
     >
       <div className='flex-between  p-4 mb-5'>
-         <Link className='text-2xl flex-center gap-2 text-primary' href='/'>
+         <Link
+         onClick={()=> setSidebarOpen(false)}
+          className='text-2xl flex-center gap-2 text-primary' href='/'>
           <IoLogoAlipay />
           <span className='font-beirut text-3xl font-bold'>سامی کالا</span>
         </Link>
