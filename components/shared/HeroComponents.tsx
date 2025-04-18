@@ -32,6 +32,8 @@ const HeroComponents = () => {
       <Card src='/images/womens-collection.webp' title='لباس  زنانه' />
       </CarouselItem>
     </CarouselContent>
+    <CarouselPrevious />
+      <CarouselNext />
   </Carousel>
   )
 }
