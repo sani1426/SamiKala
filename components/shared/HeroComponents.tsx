@@ -5,17 +5,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import Autoplay from "embla-carousel-autoplay"
+
 import Card from './Card'
 
 const HeroComponents = () => {
   return (
     <Carousel
-    plugins={[
-        Autoplay({
-          delay: 3000,
-        })
-    ]}
+ 
     opts={{
         align: "start",
         loop: true,
