@@ -100,7 +100,7 @@
   }
 
   .sidebar-mobile{
-    @apply fixed top-0 w-3/4 sm:w-1/2 md:w-1/4 h-full  bg-white text-black dark:bg-slate-800 dark:text-slate-100 transition-all duration-300 shadow-lg shadow-[rgba(0,0,0,.3)] dark:shadow-[rgba(255,255,255,.2)] transform flex flex-col z-50
+    @apply fixed top-0 w-1/2 sm:w-1/2  h-full  bg-white text-black dark:bg-slate-800 dark:text-slate-100 transition-all duration-300 shadow-lg shadow-[rgba(0,0,0,.3)] dark:shadow-[rgba(255,255,255,.2)] transform flex flex-col z-50
   }
 }
 
