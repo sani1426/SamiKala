@@ -18,8 +18,8 @@ const Footer = () => {
                 </form>
             </div>
 
-            <div>
-                <h3 className="text-lg text-gray-800 mb-4 dark:text-gray-300">فروشگاه</h3>
+            <div className="my-auto">
+                <h3 className="text-xl text-center text-gray-800 mb-4 dark:text-gray-300">فروشگاه</h3>
                 <ul className="flex items-center gap-4 text-gray-600 dark:text-gray-400">
                     <NavItem />
                 </ul>
