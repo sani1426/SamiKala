@@ -14,7 +14,7 @@ const HeroComponents = () => {
   return (
     <div>
        <Carousel className="w-full max-w-xs">
-      <CarouselContent>
+      <CarouselContent className="w-screen h-screen">
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1 w-screen h-screen">
