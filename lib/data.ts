@@ -8,24 +8,24 @@ export const nav_link = [
 
 export const items =  [
     {
-      title: 'Most Popular Shoes For Sale',
-      buttonCaption: 'Shop Now',
+      title: 'جدید ترین کفش ها',
+      buttonCaption: 'مشاهده',
       image: '/images/banner3.jpg',
-      url: '/search?category=Shoes',
+      url: '/wear',
       isPublished: true,
     },
     {
-      title: 'Best Sellers in T-Shirts',
-      buttonCaption: 'Shop Now',
+      title: 'لباس های تابستانی',
+      buttonCaption: 'مشاهده',
       image: '/images/banner1.jpg',
-      url: '/search?category=T-Shirts',
+      url: '/wear',
       isPublished: true,
     },
     {
-      title: 'Best Deals on Wrist Watches',
-      buttonCaption: 'See More',
+      title: 'ساعت های لوکس',
+      buttonCaption: 'مشاهده',
       image: '/images/banner2.jpg',
-      url: '/search?category=Wrist Watches',
+      url: '/wear',
       isPublished: true,
     },
   ]
