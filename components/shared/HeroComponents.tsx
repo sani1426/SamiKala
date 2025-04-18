@@ -1,32 +1,28 @@
-
-
-
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-  } from "@/components/ui/carousel"
-import Image from "next/image"
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import Image from 'next/image'
+import Card from './Card'
 
 const HeroComponents = () => {
   return (
-    <div>
-       <Carousel className="w-full max-w-xs">
-      <CarouselContent className="w-screen h-screen">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1 w-screen h-screen">
-            <Image src="/images/rabbit-hero.webp" alt="hero_image" fill />
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-    </div>
+    <Carousel>
+    <CarouselContent>
+      <CarouselItem className="w-screen h-screen">
+        <Card src='/images/mens-collection.webp' title='لباس مردانه' />
+      </CarouselItem>
+      <CarouselItem className="w-screen h-screen">
+      <Card src='/images/rabbit-hero.webp' title='فروشگاه سامی کالا' />
+      </CarouselItem>
+      <CarouselItem className="w-screen h-screen">
+      <Card src='/images/womens-collection.webp' title='لباس  زنانه' />
+      </CarouselItem>
+    </CarouselContent>
+  </Carousel>
   )
 }
 
