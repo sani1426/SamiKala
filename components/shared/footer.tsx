@@ -1,5 +1,8 @@
 import Link from 'next/link'
-import NavItem from './Header/NavItem'
+import { IoLogoInstagram } from "react-icons/io";
+import { TbBrandMeta } from "react-icons/tb";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FiPhoneCall } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -69,6 +72,27 @@ const Footer = () => {
               <Link href='/' className=''>سوالات متداول</Link>
             </li>
           </ul>
+        </div>
+
+        <div>
+            <h3 className='text-xl mb-4'>مارا دنبال کنید</h3>
+
+            <div className="flex items-center gap-4 mb-6">
+                <a href="https://www.facebook.com" target='_blank' rel='noopener noreferrer' className=''>
+                    <TbBrandMeta className='w-6 h-6' />
+                </a>
+                <a href="https://www.instagram.com" target='_blank' rel='noopener noreferrer' className=''>
+                    < IoLogoInstagram className='w-6 h-6' />
+                </a>
+                <a href="https://www.twitter.com" target='_blank' rel='noopener noreferrer' className=''>
+                    <RiTwitterXFill className='w-6 h-6' />
+                </a>
+            </div>
+            <p>با ما تماس بگیرید.</p>
+            <p>
+            <FiPhoneCall className="w-6 h-6" /
+            </p>
+            
         </div>
       </div>
     </footer>
