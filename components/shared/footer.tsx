@@ -90,10 +90,14 @@ const Footer = () => {
             </div>
             <p>با ما تماس بگیرید.</p>
             <p>
-            <FiPhoneCall className="w-6 h-6" />
+            <FiPhoneCall className="w-6 h-6 inline-block mr-2" />
+            0991-431-8174
             </p>
             
         </div>
+      </div>
+      <div className="container mx-auto mt-12 px-5 lg:px-0  bg-slate-300 text-slate-900 dark:bg-slate-950 dark:text-slate-200 border-t border-t-slate-800 dark:border-t-slate-200">
+        <p>طراحی و برنامه نویسی با ❤ توسط سامان کریمی</p>
       </div>
     </footer>
   )
