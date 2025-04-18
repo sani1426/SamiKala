@@ -1,3 +1,4 @@
+import NavItem from "./Header/NavItem"
 
 
 
@@ -19,6 +20,9 @@ const Footer = () => {
 
             <div>
                 <h3 className="text-lg text-gray-800 mb-4 dark:text-gray-300">Shop</h3>
+                <ul className="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                    <NavItem />
+                </ul>
             </div>
         </div>
     </footer>
