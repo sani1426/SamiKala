@@ -5,12 +5,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import Image from 'next/image'
+import Autoplay from "embla-carousel-autoplay"
 import Card from './Card'
 
 const HeroComponents = () => {
   return (
-    <Carousel>
+    <Carousel
+    plugins={[
+        Autoplay({
+          delay: 3000,
+        })
+    ]}
+    opts={{
+        align: "start",
+        loop: true,
+      }}
+    >
     <CarouselContent>
       <CarouselItem className="w-screen h-screen">
         <Card src='/images/mens-collection.webp' title='لباس مردانه' />
