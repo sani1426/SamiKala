@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto mt-12 px-5 lg:px-0  bg-slate-300 text-slate-900 dark:bg-slate-950 dark:text-slate-200 border-t border-t-slate-800 dark:border-t-slate-200">
-        <p>طراحی و برنامه نویسی با ❤ توسط سامان کریمی</p>
+        <p className='text-sm tracking-tighter text-center'>طراحی و برنامه نویسی با ❤ توسط سامان کریمی</p>
       </div>
     </footer>
   )
