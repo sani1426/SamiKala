@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
             <p>با ما تماس بگیرید.</p>
             <p>
-            <FiPhoneCall className="w-6 h-6" /
+            <FiPhoneCall className="w-6 h-6" />
             </p>
             
         </div>
