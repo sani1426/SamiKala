@@ -16,7 +16,8 @@ import { NewArrivalItem } from "@/lib/constance"
  function NewArrivalSlider() {
   return (
     <section className="pt-5">
-        <h1 className="text-center text-3xl">New Arrivall Product</h1>
+        <h1 className="text-center text-3xl font-bold mb-8">Explore New Arraivals</h1>
+        <p className="text-lg mb-8">Discover latest styles stright Off the runway, freshly added to keep your wardob on the cutting edge of fashion.</p>
     <Carousel className="w-full ">
       <CarouselContent className="-ml-1">
         {NewArrivalItem.map((_, index) => (
