@@ -21,7 +21,7 @@ import Image from "next/image"
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                 <Image src="/images/banner1.jpg" fill alt="image" />
+                <span>salam1</span>
                 </CardContent>
               </Card>
             </div>
