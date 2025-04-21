@@ -8,7 +8,7 @@ const GenderCollection = () => {
         <div className="container mx-auto flex flex-col md:flex-row gap-x-8">
             <div className="relative flex-1 rounded-lg">
                 <Image src='/images/womens-collection.webp' alt="women collection" className="w-full h-[700px] object-cover hover:opacity-0 transition-all duration-500"  />
-                <Image src='/images/mens-collection.webp' alt="women collection" className="w-full h-[700px] object-cover opacity[0] hover:opacity-[1] transition-all duration-500"  />
+                <Image src='/images/mens-collection.webp' alt="women collection" className="absolute w-full h-[700px] object-cover opacity[0] hover:opacity-[1] transition-all duration-500"  />
                 <div className="absolute bottom-8 left-8 bg-white dark:bg-slate-700 bg-opacity-90 p-4 rounded-lg">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-slate-100 mb-3">
                         Womens Collection
