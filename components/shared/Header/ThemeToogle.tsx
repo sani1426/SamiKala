@@ -11,7 +11,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { BsSunFill } from "react-icons/bs"
+
+import { FaSun } from "react-icons/fa6"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
@@ -27,8 +28,8 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className='text-center text-primary' align="center">
         <DropdownMenuItem className="text-center" onClick={() => setTheme("light")}>
-      
-        <BsSunFill className="h-[2rem] w-[2rem]" />
+     <FaSun className="h-[2rem] w-[2rem] text-2xl" />
+    
         </DropdownMenuItem>
         <DropdownMenuItem className="text-center"  onClick={() => setTheme("dark")}>
         <Moon className="h-[2rem] w-[2rem]" />
