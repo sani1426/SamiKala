@@ -22,7 +22,7 @@ import { NewArrivalItem } from "@/lib/constance"
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                <Image src={_.images} alt={_.altText} fill />
+                <img src={_.images} alt={_.altText}  />
                 </CardContent>
               </Card>
             </div>
