@@ -24,7 +24,7 @@ const ProductDetails = () => {
     <div className='p-6'>
       <div className='max-w-6xl mx-auto bg-white p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
-          <div className='hidden md:flex flex-col gap-y-4 mr-6'>
+          <div className='hidden md:flex flex-col gap-4 mr-6'>
             {SelectedProduct.images.map((_, index) => {
               return (
                 <img
@@ -61,7 +61,7 @@ const ProductDetails = () => {
             <p className="text-lg mb-1 line-through">
                 {SelectedProduct.orginalPrice && `${SelectedProduct.orginalPrice}`}
             </p>
-            
+
           </div>
         </div>
       </div>
