@@ -1,8 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Settings } from "lucide-react"
+
 import { useTheme } from "next-themes"
+import { AiFillSetting } from "react-icons/ai";
 
 import { Button } from "@/components/ui/button"
 import {
@@ -36,7 +37,7 @@ export function ModeToggle() {
         <FaMoon className="h-[2rem] w-[2rem] text-2xl" />
         </DropdownMenuItem>
         <DropdownMenuItem className="text-center text-2xl"   onClick={() => setTheme("system")}>
-        <Settings className="h-[2rem] w-[2rem]" />
+        <AiFillSetting className="h-[2.5rem] w-[2.5rem]" />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
