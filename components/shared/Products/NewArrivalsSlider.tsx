@@ -31,7 +31,10 @@ function NewArrivalSlider() {
               <div className='p-1'>
                 <Card>
                   <CardContent className='flex  items-center justify-center p-2'>
+                    <div className=''>
                     <img src={_.images} alt={_.altText} />
+                    <h1 className=''>{_.name}</h1>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
