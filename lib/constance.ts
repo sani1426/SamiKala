@@ -111,4 +111,44 @@ export const NewArrivalItem = [
 
     altText: 'Slim-Fit Easy-Iron Shirt Front View',
   },
+  {
+    _id: '6',
+    name: 'Slim-Fit Easy-Iron Shirt',
+    price: 34.99,
+    images: 'https://picsum.photos/500/500?random=57',
+
+    altText: 'Slim-Fit Easy-Iron Shirt Front View',
+  },
+  {
+    _id: '7',
+    name: 'Slim-Fit Easy-Iron Shirt',
+    price: 34.99,
+    images: 'https://picsum.photos/500/500?random=67',
+
+    altText: 'Slim-Fit Easy-Iron Shirt Front View',
+  },
+  {
+    _id: '8',
+    name: 'Slim-Fit Easy-Iron Shirt',
+    price: 34.99,
+    images: 'https://picsum.photos/500/500?random=87',
+
+    altText: 'Slim-Fit Easy-Iron Shirt Front View',
+  },
+  {
+    _id: '9',
+    name: 'Slim-Fit Easy-Iron Shirt',
+    price: 34.99,
+    images: 'https://picsum.photos/500/500?random=97',
+
+    altText: 'Slim-Fit Easy-Iron Shirt Front View',
+  },
+  {
+    _id: '10',
+    name: 'Slim-Fit Easy-Iron Shirt',
+    price: 34.99,
+    images: 'https://picsum.photos/500/500?random=107',
+
+    altText: 'Slim-Fit Easy-Iron Shirt Front View',
+  },
 ]
