@@ -43,7 +43,7 @@ const ProductDetails = () => {
           </div>
           {/*  mobile version */}
 
-          <div className="md:hidden flex overscroll-x-scroll">
+          <div className="md:hidden flex overscroll-x-scroll gap-4">
           {SelectedProduct.images.map((_, index) => {
               return (
                 <img
