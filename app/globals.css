@@ -10,6 +10,10 @@
   src: url(../public/beiruty/static/Beiruti-Light.ttf)format(truetype);
 }
 
+.dark{
+  @apply bg-slate-900 text-slate-100 !important
+}
+
 
 @layer base {
   :root {

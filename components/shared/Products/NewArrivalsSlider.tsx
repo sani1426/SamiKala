@@ -34,6 +34,7 @@ function NewArrivalSlider() {
                     <div className=''>
                     <img src={_.images} alt={_.altText} />
                     <h1 className=''>{_.name}</h1>
+                    <p>{_.price}</p>
                     </div>
                   </CardContent>
                 </Card>
