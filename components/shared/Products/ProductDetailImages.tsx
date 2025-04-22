@@ -41,8 +41,8 @@ const ProductDetailImages = ({SelectedProduct } : { SelectedProduct: SelectedPro
         )
       })}
     </div>
-    <div className='md:w-1/2'>
-      <div className='mb-4'>
+    <div className='md:w-full h-full'>
+      <div className='mb-4 w-full h-full'>
         <img
           src={mainImage}
           alt='main product'
