@@ -25,7 +25,7 @@ const ProductDetailImages = ({SelectedProduct } : { SelectedProduct: SelectedPro
 
     const [mainImage , setMainImage] = useState(SelectedProduct.images[0]?.url)
   return (
-    <div className='flex flex-col md:flex-row'>
+    <div className='flex flex-col md:flex-row w-full'>
     <div className='hidden md:flex flex-col gap-4 mr-6'>
       {SelectedProduct.images.map((_, index) => {
         return (
