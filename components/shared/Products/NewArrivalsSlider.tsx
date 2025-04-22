@@ -26,7 +26,7 @@ function NewArrivalSlider() {
           {NewArrivalItem.map((_, index) => (
             <CarouselItem
               key={index}
-              className='pl-1 md:basis-1/3 lg:basis-1/5'
+              className='pl-1 md:basis-1/3 lg:basis-1/4'
             >
               <div className='p-1'>
                 <Card>
