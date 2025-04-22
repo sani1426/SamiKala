@@ -1,5 +1,7 @@
 "use client"
 
+import {useState} from "react"
+
 type Image = {
     url: string;
     altText: string;
@@ -20,12 +22,17 @@ export type SelectedProductProps ={
 
 
 const ProductDetailImages = ({SelectedProduct } : { SelectedProduct: SelectedProductProps}) => {
+
+    const [mainImage , setMainImage] = useState(SelectedProduct.images[0]?.url)
   return (
     <div className='flex flex-col md:flex-row'>
     <div className='hidden md:flex flex-col gap-4 mr-6'>
       {SelectedProduct.images.map((_, index) => {
         return (
           <img
+          onClick={() => {
+            setMainImage(_.url)
+          }}
             key={index}
             src={_.url}
             alt={_.altText}
@@ -37,7 +44,7 @@ const ProductDetailImages = ({SelectedProduct } : { SelectedProduct: SelectedPro
     <div className='md:w-1/2'>
       <div className='mb-4'>
         <img
-          src={SelectedProduct.images[0]?.url}
+          src={mainImage}
           alt='main product'
           className='w-full h-auto object-cover rounded-lg'
         />
@@ -49,6 +56,9 @@ const ProductDetailImages = ({SelectedProduct } : { SelectedProduct: SelectedPro
       {SelectedProduct.images.map((_, index) => {
         return (
           <img
+          onClick={() => {
+            setMainImage(_.url)
+          }}
             key={index}
             src={_.url}
             alt={_.altText}
