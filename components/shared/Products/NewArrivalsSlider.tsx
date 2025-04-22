@@ -33,9 +33,9 @@ function NewArrivalSlider() {
                   <CardContent className='flex  items-center justify-center p-2'>
                     <div dir='ltr' className='relative '>
                     <img className='w-full h-full' src={_.images} alt={_.altText} />
-                    <div className='flex w-full items-center justify-between absolute bottom-3'>
-                    <h1 className='text-sm'>{_.name}</h1>
-                    <p className='text-xs'>{_.price}</p>
+                    <div className='flex w-full items-center justify-between absolute bottom-3 px-3'>
+                    <h1 className=''>{_.name}</h1>
+                    <p className='text-sm'>{_.price}</p>
                     </div>
                  
                     </div>
