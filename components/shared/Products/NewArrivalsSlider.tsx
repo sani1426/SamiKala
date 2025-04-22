@@ -31,11 +31,11 @@ function NewArrivalSlider() {
               <div className='p-1'>
                 <Card>
                   <CardContent className='flex  items-center justify-center p-2'>
-                    <div className='relative direction-reverse'>
+                    <div dir='ltr' className='relative '>
                     <img className='w-full h-full' src={_.images} alt={_.altText} />
-                    <div className='flex items-center justify-between absolute bottom-3'>
-                    <h1 className=''>{_.name}</h1>
-                    <p>{_.price}</p>
+                    <div className='flex w-full items-center justify-between absolute bottom-3'>
+                    <h1 className='text-sm'>{_.name}</h1>
+                    <p className='text-xs'>{_.price}</p>
                     </div>
                  
                     </div>
