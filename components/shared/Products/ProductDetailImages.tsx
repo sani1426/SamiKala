@@ -1,73 +1,74 @@
-"use client"
+'use client'
 
-import {useState} from "react"
+import { useState } from 'react'
 
 type Image = {
-    url: string;
-    altText: string;
-  };
-
-export type SelectedProductProps ={
-    name : string ,
-    price : number ,
-    orginalPrice: number ,
-    description :string ,
-    brand : string ,
-    material : string ,
-    size: string[] ,
-    colors : string[],
-    images : Image [],
-    
+  url: string
+  altText: string
 }
 
+export type SelectedProductProps = {
+  name: string
+  price: number
+  orginalPrice: number
+  description: string
+  brand: string
+  material: string
+  size: string[]
+  colors: string[]
+  images: Image[]
+}
 
-const ProductDetailImages = ({SelectedProduct } : { SelectedProduct: SelectedProductProps}) => {
-
-    const [mainImage , setMainImage] = useState(SelectedProduct.images[0]?.url)
+const ProductDetailImages = ({
+  SelectedProduct,
+}: {
+  SelectedProduct: SelectedProductProps
+}) => {
+  const [mainImage, setMainImage] = useState(SelectedProduct.images[0]?.url)
   return (
     <div className='flex flex-col md:flex-row w-full'>
-    <div className='hidden md:flex flex-col gap-4 mr-6'>
-      {SelectedProduct.images.map((_, index) => {
-        return (
+      <div className='hidden md:flex flex-col gap-4 mr-6'>
+        {SelectedProduct.images.map((_, index) => {
+          return (
+            <img
+              onClick={() => {
+                setMainImage(_.url)
+              }}
+              key={index}
+              src={_.url}
+              alt={_.altText}
+              className='w-20 h-20 object-cover rounded-lg cursor-pointer border'
+            />
+          )
+        })}
+      </div>
+      <div className='md:w-full h-full'>
+        <div className='mb-4 w-full h-full'>
           <img
-          onClick={() => {
-            setMainImage(_.url)
-          }}
-            key={index}
-            src={_.url}
-            alt={_.altText}
-            className='w-20 h-20 object-cover rounded-lg cursor-pointer border'
+            src={mainImage}
+            alt='main product'
+            className='w-full h-auto object-cover rounded-lg'
           />
-        )
-      })}
-    </div>
-    <div className='md:w-full h-full'>
-      <div className='mb-4 w-full h-full'>
-        <img
-          src={mainImage}
-          alt='main product'
-          className='w-full h-auto object-cover rounded-lg'
-        />
+        </div>
+      </div>
+      {/*  mobile version */}
+
+      <div className='md:hidden flex overscroll-x-scroll gap-4'>
+        {SelectedProduct.images.map((_, index) => {
+          return (
+            <img
+              onClick={() => {
+                setMainImage(_.url)
+              }}
+              key={index}
+              src={_.url}
+              alt={_.altText}
+              className='w-20 h-20 object-cover rounded-lg cursor-pointer border'
+            />
+          )
+        })}
       </div>
     </div>
-    {/*  mobile version */}
-
-    <div className='md:hidden flex overscroll-x-scroll gap-4'>
-      {SelectedProduct.images.map((_, index) => {
-        return (
-          <img
-          onClick={() => {
-            setMainImage(_.url)
-          }}
-            key={index}
-            src={_.url}
-            alt={_.altText}
-            className='w-20 h-20 object-cover rounded-lg cursor-pointer border'
-          />
-        )
-      })}
-    </div>
-</div>
   )
 }
 
