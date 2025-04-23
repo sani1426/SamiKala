@@ -22,29 +22,30 @@ function NewArrivalSlider() {
         your wardob on the cutting edge of fashion.
       </p>
       <Carousel className='w-full '>
-        <CarouselContent className='-ml-1'>
-          {NewArrivalItem.map((_, index) => (
-            <CarouselItem
-              key={index}
-              className='pl-1 md:basis-1/3 lg:basis-1/4'
-            >
-              <div className='p-1'>
+        {NewArrivalItem.map((_, index) => (
+          <CarouselContent key={index} className='-ml-1'>
+            <CarouselItem className='pl-1 md:basis-1/3 lg:basis-1/4'>
+   
                 <Card>
                   <CardContent className='flex  items-center justify-center p-2'>
                     <div dir='ltr' className='relative '>
-                    <img className='w-full h-full' src={_.images} alt={_.altText} />
-                    <div className='flex w-full items-center justify-between absolute bottom-3 px-3'>
-                    <h1 className=''>{_.name}</h1>
-                    <p className='text-sm'>{_.price}</p>
-                    </div>
-                 
+                      <img
+                        className='w-full h-full'
+                        src={_.images}
+                        alt={_.altText}
+                      />
+                      <div className='flex w-full items-center justify-between absolute bottom-3 px-3'>
+                        <h1 className=''>{_.name}</h1>
+                        <p className='text-sm'>{_.price}</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
-              </div>
+
             </CarouselItem>
-          ))}
-        </CarouselContent>
+          </CarouselContent>
+        ))}
+
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>

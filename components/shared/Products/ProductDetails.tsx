@@ -36,8 +36,12 @@ const ProductDetails = () => {
               {SelectedProduct.orginalPrice &&
                 `${SelectedProduct.orginalPrice}`}
             </p>
-            <p className='text-xl mb-2 text-slate-900 dark:slate-100 '>$ {SelectedProduct.price}</p>
-            <p className='mb-4 text-slate-700 dark:text-slate-300'>{SelectedProduct.description}</p>
+            <p className='text-xl mb-2 text-slate-900 dark:slate-100 '>
+              $ {SelectedProduct.price}
+            </p>
+            <p className='mb-4 text-slate-700 dark:text-slate-300'>
+              {SelectedProduct.description}
+            </p>
             <div className='mb-4'>
               <p>Color :</p>
               <div className='flex gap-2 mt-2'>
@@ -58,7 +62,10 @@ const ProductDetails = () => {
               <p>Size :</p>
               <div className='flex gap-2 mt-2'>
                 {SelectedProduct.size.map((size) => (
-                  <button key={size} className='px-4 py-2 rounded border bg-white text-black dark:bg-black dark:text-white'>
+                  <button
+                    key={size}
+                    className='px-4 py-2 rounded border bg-white text-black dark:bg-black dark:text-white'
+                  >
                     {size}
                   </button>
                 ))}
@@ -68,9 +75,13 @@ const ProductDetails = () => {
             <div className='mb-6'>
               <p>Quantity :</p>
               <div className='flex items-center gap-x-4 mt-2'>
-                <button className='px-2 bg-gray-400 rounded text-lg dark:bg-gray-700'>-</button>
+                <button className='px-2 bg-gray-400 rounded text-lg dark:bg-gray-700'>
+                  -
+                </button>
                 <span className='text-lg'>1</span>
-                <button className='px-2 bg-gray-400 dark:bg-gray-700 rounded text-lg'>+</button>
+                <button className='px-2 bg-gray-400 dark:bg-gray-700 rounded text-lg'>
+                  +
+                </button>
               </div>
             </div>
 
