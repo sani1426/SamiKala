@@ -34,7 +34,20 @@ function NewArrivalSlider() {
               key={product._id}
               className='md:basis-1/3 lg:basis-1/5'
             >
-              <img src={product.images} alt={product.altText} />
+              <div className='relative rounded-lg px-2'>
+                <img
+                  className='w-full h-full rounded-lg'
+                  src={product.images}
+                  alt={product.altText}
+                />
+                <div
+                  dir='ltr'
+                  className='absolute bottom-2 w-full flex justify-between items-center'
+                >
+                  <h1 className='text-white font-bold '>{product.name}</h1>
+                  <p className='text-white text-sm'>{product.price}</p>
+                </div>
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
