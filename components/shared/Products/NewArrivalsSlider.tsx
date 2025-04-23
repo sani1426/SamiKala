@@ -13,7 +13,7 @@ import { NewArrivalItem } from '@/lib/constance'
 
 function NewArrivalSlider() {
   return (
-    <section className='py-12 px-4 md:px-10 overflow-hidden'>
+    <section className='py-12 px-4 md:px-5 '>
       <h1 className='text-center text-3xl font-bold my-8'>
         Explore New Arraivals
       </h1>
@@ -22,25 +22,25 @@ function NewArrivalSlider() {
         your wardob on the cutting edge of fashion.
       </p>
       <Carousel
-           opts={{
-             align: 'start',
-           }}
-           className='w-full'
-         >
-           <CarouselContent>
-             {NewArrivalItem.map((product) => (
-               <CarouselItem
-                 key={product._id}
-                 className= 'md:basis-1/3 lg:basis-1/5'>
-         <Card>
+        opts={{
+          align: 'start',
+          loop: true,
+        }}
+        className='w-full'
+      >
+        <CarouselContent>
+          {NewArrivalItem.map((product) => (
+            <CarouselItem
+              key={product._id}
+              className='md:basis-1/3 lg:basis-1/5'
+            >
               <img src={product.images} alt={product.altText} />
-         </Card>
-               </CarouselItem>
-             ))}
-           </CarouselContent>
-           <CarouselPrevious className='left-0' />
-           <CarouselNext className='right-0' />
-         </Carousel>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className='left-0' />
+        <CarouselNext className='right-0' />
+      </Carousel>
     </section>
   )
 }
