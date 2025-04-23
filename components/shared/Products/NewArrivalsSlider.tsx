@@ -21,36 +21,26 @@ function NewArrivalSlider() {
         Discover latest styles stright Off the runway, freshly added to keep
         your wardob on the cutting edge of fashion.
       </p>
-      <Carousel className='w-full '>
-     
-          {NewArrivalItem.map((_, index) => (
-               <CarouselContent       key={index} className='-ml-1 md:basis-1/3 lg:basis-1/4'>
-            <CarouselItem
-        
-              className='px-2 '
-            >
-              <div className='p-1'>
-                <Card>
-                  <CardContent className='flex  items-center justify-center p-2 relative'>
-                    <img
-                      className='w-full h-full'
-                      src={_.images}
-                      alt={_.altText}
-                    />
-                    <div className='flex w-full items-center justify-between absolute bottom-3 px-3 text-white'>
-                      <h1 className=''>{_.name}</h1>
-                      <p className='text-sm'>{_.price}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            </CarouselContent>
-          ))}
-      
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+      <Carousel
+           opts={{
+             align: 'start',
+           }}
+           className='w-full'
+         >
+           <CarouselContent>
+             {NewArrivalItem.map((product) => (
+               <CarouselItem
+                 key={product._id}
+                 className= 'md:basis-1/3 lg:basis-1/5'>
+         <Card>
+              <img src={product.images} alt={product.altText} />
+         </Card>
+               </CarouselItem>
+             ))}
+           </CarouselContent>
+           <CarouselPrevious className='left-0' />
+           <CarouselNext className='right-0' />
+         </Carousel>
     </section>
   )
 }
