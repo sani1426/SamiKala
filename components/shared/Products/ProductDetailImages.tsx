@@ -2,33 +2,18 @@
 
 import { useState } from 'react'
 
-type Image = {
+type imagesType = {
   url: string
   altText: string
-}
+  _id: string
+}[]
 
-export type SelectedProductProps = {
-  name: string
-  price: number
-  orginalPrice: number
-  description: string
-  brand: string
-  material: string
-  size: string[]
-  colors: string[]
-  images: Image[]
-}
-
-const ProductDetailImages = ({
-  SelectedProduct,
-}: {
-  SelectedProduct: SelectedProductProps
-}) => {
-  const [mainImage, setMainImage] = useState(SelectedProduct.images[0]?.url)
+const ProductDetailImages = ({ Images }: { Images: imagesType }) => {
+  const [mainImage, setMainImage] = useState(Images[0]?.url)
   return (
     <div className='flex flex-col md:flex-row w-full'>
       <div className='hidden md:flex flex-col gap-4 mr-6'>
-        {SelectedProduct.images.map((_, index) => {
+        {Images.map((_, index) => {
           return (
             <img
               onClick={() => {
@@ -54,7 +39,7 @@ const ProductDetailImages = ({
       {/*  mobile version */}
 
       <div className='md:hidden flex overscroll-x-scroll gap-4'>
-        {SelectedProduct.images.map((_, index) => {
+        {Images.map((_, index) => {
           return (
             <img
               onClick={() => {

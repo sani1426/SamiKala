@@ -1,43 +1,44 @@
 import { Button } from '@/components/ui/button'
 import ProductDetailImages from './ProductDetailImages'
+import { ProductsTypeProps } from '@/types/type'
 
-const SelectedProduct = {
-  name: 'Stylish Jacket',
-  price: 120,
-  orginalPrice: 150,
-  description: 'This is a stylish jacket prfect for any occasion',
-  brand: 'FashionBrand',
-  material: 'Leather',
-  size: ['S', 'M', 'L', 'XL'],
-  colors: ['Red', 'Black'],
-  images: [
-    {
-      url: 'https://picsum.photos/500/500?random=1',
-      altText: 'stylish jacket 1',
-    },
-    {
-      url: 'https://picsum.photos/500/500?random=2',
-      altText: 'stylish jacket 2',
-    },
-  ],
-}
+// const SelectedProduct = {
+//   name: 'Stylish Jacket',
+//   price: 120,
+//   orginalPrice: 150,
+//   description: 'This is a stylish jacket prfect for any occasion',
+//   brand: 'FashionBrand',
+//   material: 'Leather',
+//   size: ['S', 'M', 'L', 'XL'],
+//   colors: ['Red', 'Black'],
+//   images: [
+//     {
+//       url: 'https://picsum.photos/500/500?random=1',
+//       altText: 'stylish jacket 1',
+//     },
+//     {
+//       url: 'https://picsum.photos/500/500?random=2',
+//       altText: 'stylish jacket 2',
+//     },
+//   ],
+// }
 
-const ProductDetails = () => {
+const ProductDetails = ({SelectedProduct}: {SelectedProduct : ProductsTypeProps }) => {
   return (
     <div dir='ltr' className='p-6'>
       <div className='max-w-6xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
-          <ProductDetailImages SelectedProduct={SelectedProduct} />
+          <ProductDetailImages Images={SelectedProduct.images} />
           <div className='md:w-1/2 md:ml-10'>
             <h1 className='text-2xl text-slate-950 dark:text-slate-50 md:text-3xl font-semibold mb-2'>
               {SelectedProduct.name}
             </h1>
             <p className='text-lg mb-1 line-through text-slate-700 dark:text-slate-300'>
-              {SelectedProduct.orginalPrice &&
-                `${SelectedProduct.orginalPrice}`}
+              {SelectedProduct.price &&
+                `${SelectedProduct.price}`}
             </p>
             <p className='text-xl mb-2 text-slate-900 dark:slate-100 '>
-              $ {SelectedProduct.price}
+              $ {SelectedProduct.discountPrice}
             </p>
             <p className='mb-4 text-slate-700 dark:text-slate-300'>
               {SelectedProduct.description}
@@ -61,7 +62,7 @@ const ProductDetails = () => {
             <div className='mb-4'>
               <p>Size :</p>
               <div className='flex gap-2 mt-2'>
-                {SelectedProduct.size.map((size) => (
+                {SelectedProduct.sizes.map((size) => (
                   <button
                     key={size}
                     className='px-4 py-2 rounded border bg-white text-black dark:bg-black dark:text-white'
