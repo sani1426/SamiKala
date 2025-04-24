@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import connectToDb from "../database/db"
 import Product from "../models/Product";
-import { ProductType } from "@/types/type";
+
 
 
 export const GetAllProduct = async ()=> {
