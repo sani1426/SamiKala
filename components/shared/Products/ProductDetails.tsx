@@ -123,7 +123,7 @@ const AddingToCart = () => {
 
             <Button
             onClick={AddingToCart}
-            className='py-2 px-6 w-full mb-4 rounded'>
+            className={`${disable === true ? "bg-violet-400" : ""}  py-2 px-6 w-full mb-4 rounded`}>
               Add to Cart
             </Button>
             <div className='mt-10'>
