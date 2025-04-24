@@ -10,7 +10,7 @@ export const GetAllProduct = async ()=> {
     try {
 
             const Products = await Product.find()
-            return {data : JSON.parse(JSON.stringify(Products)) };
+            return  JSON.parse(JSON.stringify(Products)) 
 
 
     } catch (error) {
