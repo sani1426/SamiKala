@@ -49,7 +49,7 @@ const AddingToCart = () => {
     toast.success('product added to cart' , {duration:3000})
 
     setDisable(false)
-  },1000 );
+  },2000 );
 }
 
 
