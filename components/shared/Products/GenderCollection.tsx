@@ -1,11 +1,9 @@
-import { GetAllProduct } from '@/lib/actions/productActions'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const GenderCollection = async  () => {
+const GenderCollection =  () => {
 
-  const products = await GetAllProduct();
-  console.log(products);
+
   
 
   return (

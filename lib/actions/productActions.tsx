@@ -20,4 +20,19 @@ export const GetAllProduct = async ()=> {
     }
 }
 
+export const GetNewArrival = async () => {
+
+    await connectToDb()
+
+    try {
+        const newArrival = await Product.find({
+            createdAt : -1
+        })
+
+    } catch (error) {
+        console.log(error);
+        return new NextResponse("Server Error")
+    }
+}
+
 
