@@ -1,7 +1,13 @@
+import { GetAllProduct } from '@/lib/actions/productActions'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const GenderCollection = () => {
+const GenderCollection = async  () => {
+
+  const products = await GetAllProduct();
+  console.log(products);
+  
+
   return (
     <section className='py-16 px-4 lg:px-0 bg-slate-200 dark:bg-slate-800'>
       <div className='container mx-auto flex flex-col gap-y-8 md:flex-row md:gap-x-8'>

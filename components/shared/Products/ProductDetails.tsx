@@ -123,8 +123,8 @@ const AddingToCart = () => {
 
             <Button
             onClick={AddingToCart}
-            className={`${disable === true ? "bg-violet-400" : ""}  py-2 px-6 w-full mb-4 rounded`}>
-              Add to Cart
+            className={`${disable === true ? "bg-violet-400 opacity-50 cursor-not-allowed" : ""}  py-2 px-6 w-full mb-4 rounded`}>
+            {disable ? "Adding..." : "Add to Cart"}
             </Button>
             <div className='mt-10'>
               <h3 className='text-xl font-bold mb-4'>Characteristics :</h3>
@@ -143,9 +143,14 @@ const AddingToCart = () => {
             </div>
           </div>
         </div>
+        <div className="mt-20">
+          <h2 className="text-2xl text-center font-medium mb-4">
+            You May Also Like
+          </h2>
+        </div>
       </div>
     </div>
-  )
+  ) 
 }
 
 export default ProductDetails
