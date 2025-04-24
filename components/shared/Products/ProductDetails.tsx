@@ -1,4 +1,6 @@
 "use client"
+import { toast } from "sonner"
+
 
 
 import { Button } from '@/components/ui/button'
@@ -34,7 +36,21 @@ const [selectedSize , setSelectedSize] = useState("")
 const [quantity , setQuantity] = useState(1)
 const [disable , setDisable] = useState(false)
 
+const AddingToCart = () => {
+  if (!selectedSize || !selectedColor) {
+    toast.error("plese select a size and color before adding to cart" , {
+      duration: 1000
+    });
+    return;
+  }
 
+  setDisable(true)
+  setTimeout(() => {
+    toast.success('product added to cart' , {duration:100})
+
+    setDisable(false)
+  },500 );
+}
 
 
   return (
@@ -105,7 +121,9 @@ const [disable , setDisable] = useState(false)
               </div>
             </div>
 
-            <Button className='py-2 px-6 w-full mb-4 rounded'>
+            <Button
+            onClick={AddingToCart}
+            className='py-2 px-6 w-full mb-4 rounded'>
               Add to Cart
             </Button>
             <div className='mt-10'>
