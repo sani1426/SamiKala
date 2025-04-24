@@ -1,5 +1,9 @@
+"use client"
+
+
 import { Button } from '@/components/ui/button'
 import ProductDetailImages from './ProductDetailImages'
+import { useState } from 'react'
 
 const SelectedProduct = {
   _id : "iam id",
@@ -24,6 +28,15 @@ const SelectedProduct = {
 }
 
 const ProductDetails = () => {
+
+const [selectedColor , setSelectedColor] = useState("")
+const [selectedSize , setSelectedSize] = useState("")
+const [quantity , setQuantity] = useState(1)
+const [disable , setDisable] = useState(false)
+
+
+
+
   return (
     <div dir='ltr' className='p-6'>
       <div className='max-w-6xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg'>
@@ -48,8 +61,9 @@ const ProductDetails = () => {
               <div className='flex gap-2 mt-2'>
                 {SelectedProduct.colors.map((color, index) => (
                   <button
+                  onClick={()=> setSelectedColor(color)}
                     key={index}
-                    className='w-8 h-8 rounded-full border'
+                    className={ `${selectedColor === color ? "border-4 border-black dark:border-white" : ""}  w-8 h-8 rounded-full border`}
                     style={{
                       background: color.toLocaleLowerCase(),
                       filter: 'brightness(0.5)',
@@ -64,8 +78,9 @@ const ProductDetails = () => {
               <div className='flex gap-2 mt-2'>
                 {SelectedProduct.size.map((size) => (
                   <button
+                  onClick={()=> setSelectedSize(size)}
                     key={size}
-                    className='px-4 py-2 rounded border bg-white text-black dark:bg-black dark:text-white'
+                    className={`${selectedSize === size ?  "border-4 border-blue" : "border-1 border-black dark:border-white"}  px-4 py-2 rounded border bg-white text-black dark:bg-black dark:text-white`}
                   >
                     {size}
                   </button>
@@ -76,11 +91,15 @@ const ProductDetails = () => {
             <div className='mb-6'>
               <p>Quantity :</p>
               <div className='flex items-center gap-x-4 mt-2'>
-                <button className='px-2 bg-gray-400 rounded text-lg dark:bg-gray-700'>
+                <button
+                onClick={()=> setQuantity(quantity - 1)}
+                className='px-2 bg-gray-400 rounded text-lg dark:bg-gray-700'>
                   -
                 </button>
-                <span className='text-lg'>1</span>
-                <button className='px-2 bg-gray-400 dark:bg-gray-700 rounded text-lg'>
+                <span className='text-lg'>{quantity}</span>
+                <button
+                onClick={()=> setQuantity(quantity + 1)}
+                className='px-2 bg-gray-400 dark:bg-gray-700 rounded text-lg'>
                   +
                 </button>
               </div>
