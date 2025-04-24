@@ -39,17 +39,17 @@ const [disable , setDisable] = useState(false)
 const AddingToCart = () => {
   if (!selectedSize || !selectedColor) {
     toast.error("plese select a size and color before adding to cart" , {
-      duration: 1000
+      duration: 3000
     });
     return;
   }
 
   setDisable(true)
   setTimeout(() => {
-    toast.success('product added to cart' , {duration:100})
+    toast.success('product added to cart' , {duration:3000})
 
     setDisable(false)
-  },500 );
+  },1000 );
 }
 
 
