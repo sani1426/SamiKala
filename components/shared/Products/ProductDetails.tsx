@@ -1,34 +1,34 @@
 import { Button } from '@/components/ui/button'
 import ProductDetailImages from './ProductDetailImages'
-import { ProductsTypeProps } from '@/types/type'
 
-// const SelectedProduct = {
-//   name: 'Stylish Jacket',
-//   price: 120,
-//   orginalPrice: 150,
-//   description: 'This is a stylish jacket prfect for any occasion',
-//   brand: 'FashionBrand',
-//   material: 'Leather',
-//   size: ['S', 'M', 'L', 'XL'],
-//   colors: ['Red', 'Black'],
-//   images: [
-//     {
-//       url: 'https://picsum.photos/500/500?random=1',
-//       altText: 'stylish jacket 1',
-//     },
-//     {
-//       url: 'https://picsum.photos/500/500?random=2',
-//       altText: 'stylish jacket 2',
-//     },
-//   ],
-// }
+const SelectedProduct = {
+  _id : "iam id",
+  name: 'Stylish Jacket',
+  price: 120,
+  discountPrice: 150,
+  description: 'This is a stylish jacket prfect for any occasion',
+  brand: 'FashionBrand',
+  material: 'Leather',
+  size: ['S', 'M', 'L', 'XL'],
+  colors: ['Red', 'Black'],
+  images: [
+    {
+      url: 'https://picsum.photos/500/500?random=1',
+      altText: 'stylish jacket 1',
+    },
+    {
+      url: 'https://picsum.photos/500/500?random=2',
+      altText: 'stylish jacket 2',
+    },
+  ],
+}
 
-const ProductDetails = ({SelectedProduct}: {SelectedProduct : ProductsTypeProps }) => {
+const ProductDetails = () => {
   return (
     <div dir='ltr' className='p-6'>
       <div className='max-w-6xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
-          <ProductDetailImages   Images={SelectedProduct.images} />
+          <ProductDetailImages   SelectProduct={SelectedProduct} />
           <div className='md:w-1/2 md:ml-10'>
             <h1 className='text-2xl text-slate-950 dark:text-slate-50 md:text-3xl font-semibold mb-2'>
               {SelectedProduct.name}
@@ -62,7 +62,7 @@ const ProductDetails = ({SelectedProduct}: {SelectedProduct : ProductsTypeProps 
             <div className='mb-4'>
               <p>Size :</p>
               <div className='flex gap-2 mt-2'>
-                {SelectedProduct.sizes.map((size) => (
+                {SelectedProduct.size.map((size) => (
                   <button
                     key={size}
                     className='px-4 py-2 rounded border bg-white text-black dark:bg-black dark:text-white'

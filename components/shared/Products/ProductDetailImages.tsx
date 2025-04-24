@@ -1,19 +1,16 @@
 'use client'
 
+import { ProductsTypeProps } from '@/types/type'
 import { useState } from 'react'
 
-type imagesType = {
-  url: string
-  altText: string
-  _id: string
-}[]
 
-const ProductDetailImages = ({ Images }: { Images: imagesType }) => {
-  const [mainImage, setMainImage] = useState(Images[0]?.url)
+
+const ProductDetailImages = ( {SelectProduct}: {SelectProduct :  ProductsTypeProps}) => {
+  const [mainImage, setMainImage] = useState(SelectProduct.images[0]?.url)
   return (
     <div className='flex flex-col md:flex-row w-full'>
       <div className='hidden md:flex flex-col gap-4 mr-6'>
-        {Images.map((_, index) => {
+        {SelectProduct.images.map((_, index) => {
           return (
             <img
               onClick={() => {
@@ -39,7 +36,7 @@ const ProductDetailImages = ({ Images }: { Images: imagesType }) => {
       {/*  mobile version */}
 
       <div className='md:hidden flex overscroll-x-scroll gap-4'>
-        {Images.map((_, index) => {
+        {SelectProduct.images.map((_, index) => {
           return (
             <img
               onClick={() => {
