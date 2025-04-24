@@ -52,6 +52,8 @@ export interface ProductsTypeProps {
       height: number;
     };
     weight?: number;
+    createdAt: Date ,
+    updatedAt : Date
   }
   
  

@@ -1,6 +1,5 @@
 import * as React from 'react'
 
-
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +8,18 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
-import { NewArrivalItem } from '@/lib/constance'
+// import { NewArrivalItem } from '@/lib/constance'
+import axios from 'axios'
+import { ProductType } from '@/types/type'
 
-function NewArrivalSlider() {
+async function NewArrivalSlider() {
+
+  const { data } = await axios.get(
+    'https://sami-kala.vercel.app/api/products/new-arrivals'
+  )
+
+  const NewArrivalItem: ProductType[] = data
+
   return (
     <section className='py-12 px-4 md:px-5 '>
       <h1 className='text-center text-3xl font-bold my-8'>
@@ -31,14 +39,14 @@ function NewArrivalSlider() {
         <CarouselContent>
           {NewArrivalItem.map((product) => (
             <CarouselItem
-              key={product._id}
+              key={product.name}
               className='md:basis-1/3 lg:basis-1/5'
             >
               <div className='relative rounded-lg px-2 overflow-hidden'>
                 <img
                   className='w-full h-full rounded-lg'
-                  src={product.images}
-                  alt={product.altText}
+                  src={product.images[0].url}
+                  alt={product.images[0].altText}
                 />
                 <div
                   dir='ltr'

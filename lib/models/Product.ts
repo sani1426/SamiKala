@@ -57,6 +57,8 @@ const ProductSchema = new Schema(
       height: Number,
     },
     weight: Number,
+    createdAt: {type :Date ,  default: Date.now()},
+    updatedAt : {type :Date ,  default: Date.now()}
   },
   { timestamps: true }
 )
