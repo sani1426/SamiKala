@@ -9,7 +9,8 @@ export const GetAllProduct = async ()=> {
     await connectToDb()
 
     try {
-
+        await connectToDb()
+        
             const Products = await Product.find()
             return  JSON.parse(JSON.stringify(Products)) 
 
