@@ -63,7 +63,7 @@ const [disable , setDisable] = useState(false)
                   <button
                   onClick={()=> setSelectedColor(color)}
                     key={index}
-                    className={ `${selectedColor === color ? "border-4 border-black dark:border-white" : ""}  w-8 h-8 rounded-full border`}
+                    className={ `${selectedColor === color ? "border-4 border-sky-600 dark:border-white" : ""}  w-8 h-8 rounded-full border`}
                     style={{
                       background: color.toLocaleLowerCase(),
                       filter: 'brightness(0.5)',
