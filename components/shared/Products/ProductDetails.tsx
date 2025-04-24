@@ -28,7 +28,7 @@ const ProductDetails = ({SelectedProduct}: {SelectedProduct : ProductsTypeProps 
     <div dir='ltr' className='p-6'>
       <div className='max-w-6xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
-          <ProductDetailImages Images={SelectedProduct.images} />
+          <ProductDetailImages   Images={SelectedProduct.images} />
           <div className='md:w-1/2 md:ml-10'>
             <h1 className='text-2xl text-slate-950 dark:text-slate-50 md:text-3xl font-semibold mb-2'>
               {SelectedProduct.name}
