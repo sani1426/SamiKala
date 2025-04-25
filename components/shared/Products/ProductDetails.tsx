@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { ProductType } from '@/types/type'
 import ProductGrid from './ProductGrid'
 
-import {GetSimilarProducts } from '@/lib/actions/productActions'
+import {GetAllProduct, GetSimilarProducts } from '@/lib/actions/productActions'
 
 const ProductDetails = ({
   SelectedProduct,
@@ -37,7 +37,7 @@ const ProductDetails = ({
 
   const [similar, setSimilar] = useState([])
   const getYouLikeProduct = async () => {
-    const product = await GetSimilarProducts("Men")
+    const product = await GetAllProduct()
     setSimilar(product)
   }
 
