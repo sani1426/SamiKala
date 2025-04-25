@@ -13,7 +13,7 @@ import { ProductType } from '@/types/type'
 
 async function NewArrivalSlider() {
 
-  const { data } = await axios.get(
+  const { data } = await  axios.get(
     'https://sami-kala.vercel.app/api/products/new-arrivals'
   )
 

@@ -5,10 +5,14 @@ export async function GET () {
 
     try {
         await connectToDb();
-        const newArrivals = await Product.find().sort({ createdAt : -1}).limit(8)
-
-        return JSON.parse(JSON.stringify(newArrivals))
+        const newArrivals = await Product.find().sort({createdAt : -1}).limit(8)
+        if(newArrivals) {
+            return JSON.parse(JSON.stringify(newArrivals))
+        }else{
+          return "no new arrivals found"
+        }
         
+
     } catch (error) {
         console.log(error);
         
