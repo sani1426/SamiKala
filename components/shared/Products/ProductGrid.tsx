@@ -4,11 +4,11 @@ import Link from "next/link"
 
 const ProductGrid = ({products} : {products : ProductType[]}) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cools-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 sm:grid-cools-2 lg:grid-cols-4 gap-3">
         {
             products.map((product , index) => (
                 <Link key={index} href={`/products/${product._id}`} className="block">
-                    <div className="bg-white dark:bg-slate-950 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg shadow-lg shadow-slate-800  dark:shadow-slate-300">
                         <div className="w-full h-96 mb-4">
                             <img src={product.images[0].url} alt={product.images[0].altText} className="w-full h-full object-cover rounded-lg" />
                         </div>
