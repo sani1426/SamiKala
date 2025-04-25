@@ -9,8 +9,7 @@ export interface CartContextType {
     sidebarOpen : boolean;
     toggleSidebar : () => void;
     setSidebarOpen: (property : boolean) => void;
-    selected : ProductType;
-    settingSelectedHandler : (property : ProductType) => void;
+
 }
 
 const CartContext = createContext<CartContextType | null>(null)
@@ -19,7 +18,7 @@ export const CartContextProvider = ({children} : { children : React.ReactNode })
 
     const [drawerOpen, setDrawerOpen] = useState(false)
     const [sidebarOpen , setSidebarOpen] = useState(false)
-    const [selected , setSelected] = useState({})
+
  
 
   
@@ -27,11 +26,9 @@ export const CartContextProvider = ({children} : { children : React.ReactNode })
     
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen)
   const toggleDrawer = () => setDrawerOpen(!drawerOpen)
-  const settingSelectedHandler = (product : ProductType) => setSelected(product)
-
-
+ 
     return (
-        <CartContext.Provider value={{drawerOpen , toggleDrawer , sidebarOpen , toggleSidebar , setSidebarOpen , selected , settingSelectedHandler}}>
+        <CartContext.Provider value={{drawerOpen , toggleDrawer , sidebarOpen , toggleSidebar , setSidebarOpen }}>
             {children}
         </CartContext.Provider>
 
