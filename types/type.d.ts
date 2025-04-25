@@ -21,6 +21,7 @@ export interface ProductsTypeProps {
   }
   
  export interface ProductType {
+  _id: number ;
     name: string;
     description: string;
     price: number;

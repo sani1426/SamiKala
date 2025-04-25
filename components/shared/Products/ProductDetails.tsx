@@ -1,51 +1,61 @@
-"use client"
-import { toast } from "sonner"
-
-
+'use client'
+import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
 import ProductDetailImages from './ProductDetailImages'
-import { useState } from 'react'
-import { ProductType } from "@/types/type"
+import { useEffect, useState } from 'react'
+import { ProductType } from '@/types/type'
+import ProductGrid from './ProductGrid'
 
+import {GetSimilarProducts } from '@/lib/actions/productActions'
 
+const ProductDetails = ({
+  SelectedProduct,
+}: {
+  SelectedProduct: ProductType
+}) => {
+  const [selectedColor, setSelectedColor] = useState('')
+  const [selectedSize, setSelectedSize] = useState('')
+  const [quantity, setQuantity] = useState(1)
+  const [disable, setDisable] = useState(false)
 
-const ProductDetails = ({SelectedProduct}: {SelectedProduct : ProductType}) => {
+  const AddingToCart = () => {
+    if (!selectedSize || !selectedColor) {
+      toast.error('plese select a size and color before adding to cart', {
+        duration: 3000,
+      })
+      return
+    }
 
-const [selectedColor , setSelectedColor] = useState("")
-const [selectedSize , setSelectedSize] = useState("")
-const [quantity , setQuantity] = useState(1)
-const [disable , setDisable] = useState(false)
+    setDisable(true)
+    setTimeout(() => {
+      toast.success('product added to cart', { duration: 3000 })
 
-const AddingToCart = () => {
-  if (!selectedSize || !selectedColor) {
-    toast.error("plese select a size and color before adding to cart" , {
-      duration: 3000
-    });
-    return;
+      setDisable(false)
+    }, 2000)
   }
 
-  setDisable(true)
-  setTimeout(() => {
-    toast.success('product added to cart' , {duration:3000})
+  const [similar, setSimilar] = useState([])
+  const getYouLikeProduct = async () => {
+    const product = await GetSimilarProducts({gender : "Men"})
+    setSimilar(product)
+  }
 
-    setDisable(false)
-  },2000 );
-}
-
+  useEffect(() => {
+    getYouLikeProduct()
+  }, [])
 
   return (
     <div dir='ltr' className='p-6'>
       <div className='max-w-6xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
-          <ProductDetailImages   SelectProduct={SelectedProduct} />
+          <ProductDetailImages SelectProduct={SelectedProduct} />
           <div className='md:w-1/2 md:ml-10'>
             <h1 className='text-2xl text-slate-950 dark:text-slate-50 md:text-3xl font-semibold mb-2'>
               {SelectedProduct.name}
             </h1>
             <p className='text-lg mb-1 line-through text-slate-700 dark:text-slate-300'>
-              {SelectedProduct.price &&
-                `${SelectedProduct.price}`}
+              {SelectedProduct.price && `${SelectedProduct.price}`}
             </p>
             <p className='text-xl mb-2 text-slate-900 dark:slate-100 '>
               $ {SelectedProduct.discountPrice}
@@ -58,9 +68,13 @@ const AddingToCart = () => {
               <div className='flex gap-2 mt-2'>
                 {SelectedProduct.colors.map((color, index) => (
                   <button
-                  onClick={()=> setSelectedColor(color)}
+                    onClick={() => setSelectedColor(color)}
                     key={index}
-                    className={ `${selectedColor === color ? "border-4 border-sky-600 dark:border-white" : ""}  w-8 h-8 rounded-full border`}
+                    className={`${
+                      selectedColor === color
+                        ? 'border-4 border-sky-600 dark:border-white'
+                        : ''
+                    }  w-8 h-8 rounded-full border`}
                     style={{
                       background: color.toLocaleLowerCase(),
                       filter: 'brightness(0.5)',
@@ -75,9 +89,13 @@ const AddingToCart = () => {
               <div className='flex gap-2 mt-2'>
                 {SelectedProduct.sizes.map((size) => (
                   <button
-                  onClick={()=> setSelectedSize(size)}
+                    onClick={() => setSelectedSize(size)}
                     key={size}
-                    className={`${selectedSize === size ?  "bg-black text-white dark:bg-white dark:text-black" : "bg-white text-black dark:bg-black dark:text-white"}  px-4 py-2 rounded border `}
+                    className={`${
+                      selectedSize === size
+                        ? 'bg-black text-white dark:bg-white dark:text-black'
+                        : 'bg-white text-black dark:bg-black dark:text-white'
+                    }  px-4 py-2 rounded border `}
                   >
                     {size}
                   </button>
@@ -89,23 +107,30 @@ const AddingToCart = () => {
               <p>Quantity :</p>
               <div className='flex items-center gap-x-4 mt-2'>
                 <button
-                onClick={()=> setQuantity(quantity - 1)}
-                className='px-2 bg-gray-400 rounded text-lg dark:bg-gray-700'>
+                  onClick={() => setQuantity(quantity - 1)}
+                  className='px-2 bg-gray-400 rounded text-lg dark:bg-gray-700'
+                >
                   -
                 </button>
                 <span className='text-lg'>{quantity}</span>
                 <button
-                onClick={()=> setQuantity(quantity + 1)}
-                className='px-2 bg-gray-400 dark:bg-gray-700 rounded text-lg'>
+                  onClick={() => setQuantity(quantity + 1)}
+                  className='px-2 bg-gray-400 dark:bg-gray-700 rounded text-lg'
+                >
                   +
                 </button>
               </div>
             </div>
 
             <Button
-            onClick={AddingToCart}
-            className={`${disable === true ? "bg-violet-400 opacity-50 cursor-not-allowed" : ""}  py-2 px-6 w-full mb-4 rounded`}>
-            {disable ? "Adding..." : "Add to Cart"}
+              onClick={AddingToCart}
+              className={`${
+                disable === true
+                  ? 'bg-violet-400 opacity-50 cursor-not-allowed'
+                  : ''
+              }  py-2 px-6 w-full mb-4 rounded`}
+            >
+              {disable ? 'Adding...' : 'Add to Cart'}
             </Button>
             <div className='mt-10'>
               <h3 className='text-xl font-bold mb-4'>Characteristics :</h3>
@@ -124,15 +149,16 @@ const AddingToCart = () => {
             </div>
           </div>
         </div>
-        <div className="mt-20">
-          <h2 className="text-2xl text-center font-medium mb-4">
+        <div className='mt-20'>
+          <h2 className='text-2xl text-center font-medium mb-4'>
             You May Also Like
           </h2>
+
+          <ProductGrid products={similar} />
         </div>
       </div>
-      <h1>{SelectedProduct.name}</h1>
     </div>
-  ) 
+  )
 }
 
 export default ProductDetails
