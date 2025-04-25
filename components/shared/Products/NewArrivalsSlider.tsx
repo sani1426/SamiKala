@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
-// import { NewArrivalItem } from '@/lib/constance'
 import axios from 'axios'
 import { ProductType } from '@/types/type'
 
