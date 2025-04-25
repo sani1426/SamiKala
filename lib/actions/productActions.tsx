@@ -42,3 +42,16 @@ export async function GetNewArrivals(){
 
 
 
+export const GetBestSeller = async () => {
+
+    try {
+        await connectToDb()
+
+        const bestSeller = await Product.findOne().sort({rating : -1})
+
+        return JSON.parse(JSON.stringify(bestSeller))
+    } catch (error) {
+        console.log(error);
+        
+    }
+}

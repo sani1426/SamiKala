@@ -6,30 +6,11 @@ import { toast } from "sonner"
 import { Button } from '@/components/ui/button'
 import ProductDetailImages from './ProductDetailImages'
 import { useState } from 'react'
+import { ProductType } from "@/types/type"
 
-const SelectedProduct = {
-  _id : "iam id",
-  name: 'Stylish Jacket',
-  price: 120,
-  discountPrice: 150,
-  description: 'This is a stylish jacket prfect for any occasion',
-  brand: 'FashionBrand',
-  material: 'Leather',
-  size: ['S', 'M', 'L', 'XL'],
-  colors: ['Red', 'Black'],
-  images: [
-    {
-      url: 'https://picsum.photos/500/500?random=1',
-      altText: 'stylish jacket 1',
-    },
-    {
-      url: 'https://picsum.photos/500/500?random=2',
-      altText: 'stylish jacket 2',
-    },
-  ],
-}
 
-const ProductDetails = () => {
+
+const ProductDetails = ({SelectedProduct}: {SelectedProduct : ProductType}) => {
 
 const [selectedColor , setSelectedColor] = useState("")
 const [selectedSize , setSelectedSize] = useState("")
@@ -92,7 +73,7 @@ const AddingToCart = () => {
             <div className='mb-4'>
               <p>Size :</p>
               <div className='flex gap-2 mt-2'>
-                {SelectedProduct.size.map((size) => (
+                {SelectedProduct.sizes.map((size) => (
                   <button
                   onClick={()=> setSelectedSize(size)}
                     key={size}
@@ -149,6 +130,7 @@ const AddingToCart = () => {
           </h2>
         </div>
       </div>
+      <h1>{SelectedProduct.name}</h1>
     </div>
   ) 
 }

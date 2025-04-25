@@ -1,11 +1,11 @@
 'use client'
 
-import { ProductsTypeProps } from '@/types/type'
+import { ProductType, } from '@/types/type'
 import { useState } from 'react'
 
 
 
-const ProductDetailImages = ( {SelectProduct}: {SelectProduct :  ProductsTypeProps}) => {
+const ProductDetailImages = ( {SelectProduct}: {SelectProduct :  ProductType}) => {
   const [mainImage, setMainImage] = useState(SelectProduct.images[0]?.url)
   return (
     <div className='flex flex-col md:flex-row w-full'>
