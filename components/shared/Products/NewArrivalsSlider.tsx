@@ -13,11 +13,9 @@ import { ProductType } from '@/types/type'
 
 async function NewArrivalSlider() {
 
-  const { data } = await  axios.get(
-    'https://sami-kala.vercel.app/api/products/new-arrivals'
-  )
 
-  const NewArrivalItem: ProductType[] = data
+  const {data} = await axios.get("https://sami-kala.vercel.app/api/products")
+  const NewArrivalItem  : ProductType[] = data
 
   return (
     <section className='py-12 px-4 md:px-5 '>
