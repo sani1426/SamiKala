@@ -3,16 +3,16 @@ import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
 import ProductDetailImages from './ProductDetailImages'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ProductType } from '@/types/type'
 import ProductGrid from './ProductGrid'
 
-import {GetAllProduct, GetSimilarProducts } from '@/lib/actions/productActions'
+
 
 const ProductDetails = ({
-  SelectedProduct,
+  SelectedProduct, similarProducts
 }: {
-  SelectedProduct: ProductType
+  SelectedProduct: ProductType , similarProducts : ProductType[]
 }) => {
   const [selectedColor, setSelectedColor] = useState('')
   const [selectedSize, setSelectedSize] = useState('')
@@ -35,15 +35,6 @@ const ProductDetails = ({
     }, 2000)
   }
 
-  const [similar, setSimilar] = useState([])
-  const getYouLikeProduct = async () => {
-    const product = await GetAllProduct()
-    setSimilar(product)
-  }
-
-  useEffect(() => {
-    getYouLikeProduct()
-  }, [])
 
   return (
     <div dir='ltr' className='p-6'>
@@ -154,7 +145,7 @@ const ProductDetails = ({
             You May Also Like
           </h2>
 
-          <ProductGrid products={similar} />
+          <ProductGrid products={similarProducts} />
         </div>
       </div>
     </div>

@@ -42,15 +42,21 @@ export const GetBestSeller = async () => {
   }
 }
 
-export const GetSimilarProducts = async (gender : string) => {
+export const GetSimilarProducts = async (productId : number) => {
   try {
     await connectToDb()
 
-    const similarProducts = await Product.find()
-      .sort({ rating: -1 })
-      .limit(4)
+    const product  = await Product.findById(productId);
 
-    return JSON.parse(JSON.stringify(similarProducts))
+    if(product) {
+        const similarProducts = await Product.find({gender : product.gender})
+        .sort({ rating: -1 })
+        .limit(4);
+        return JSON.parse(JSON.stringify(similarProducts))
+    }else{
+        return "product not find"
+    }
+
   } catch (error) {
     console.log(error)
   }
