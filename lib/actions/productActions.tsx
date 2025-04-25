@@ -26,7 +26,7 @@ export async function GetNewArrivals(){
 
     try {
         await connectToDb();
-        const newArrivals = await Product.find();
+        const newArrivals = await Product.find().sort({createdAt : -1}).limit(8)
         if(newArrivals) {
             return JSON.parse(JSON.stringify(newArrivals))
         }else{

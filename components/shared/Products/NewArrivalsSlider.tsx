@@ -58,6 +58,11 @@ const NewArrivalItem: ProductType[] = await GetNewArrivals()
         <CarouselPrevious className='left-0' />
         <CarouselNext className='right-0' />
       </Carousel>
+      <div>
+        {NewArrivalItem.map(item => (
+          <h1 key={item.name}>{item.name}</h1>
+        ))}
+      </div>
     </section>
   )
 }
