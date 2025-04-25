@@ -6,6 +6,7 @@ import ProductDetailImages from './ProductDetailImages'
 import { useState } from 'react'
 import { ProductType } from '@/types/type'
 import ProductGrid from './ProductGrid'
+import { CartContextType, useCartContext } from '@/context/CartContext'
 
 
 
@@ -35,18 +36,21 @@ const ProductDetails = ({
     }, 2000)
   }
 
+  const {selected , settingSelectedHandler} = useCartContext() as CartContextType
+
+  settingSelectedHandler(SelectedProduct)
 
   return (
     <div dir='ltr' className='p-6'>
       <div className='max-w-6xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
-          <ProductDetailImages SelectProduct={SelectedProduct} />
+          <ProductDetailImages SelectProduct={selected} />
           <div className='md:w-1/2 md:ml-10'>
             <h1 className='text-2xl text-slate-950 dark:text-slate-50 md:text-3xl font-semibold mb-2'>
-              {SelectedProduct.name}
+              {selected.name}
             </h1>
             <p className='text-lg mb-1 line-through text-slate-700 dark:text-slate-300'>
-              {SelectedProduct.price && `${SelectedProduct.price}`}
+              {selected.price && `${SelectedProduct.price}`}
             </p>
             <p className='text-xl mb-2 text-slate-900 dark:slate-100 '>
               $ {SelectedProduct.discountPrice}
