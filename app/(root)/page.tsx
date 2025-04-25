@@ -1,15 +1,15 @@
 import GenderCollection from '@/components/shared/Products/GenderCollection'
 import NewArrivalSlider from '@/components/shared/Products/NewArrivalsSlider'
+import { GetAllProduct } from '@/lib/actions/productActions'
 import BestSeller from '@/section/BestSeller'
 import HeroSection from '@/section/HeroSection'
 import { ProductType } from '@/types/type'
-import axios from "axios"
+
 
 
 export default async function Home() {
 
-  const {data} = await axios.get("https://sami-kala.vercel.app/api/products")
-  const apiproduct : ProductType[] = data
+const apiproduct: ProductType[] = await GetAllProduct()
   console.log(apiproduct)
   return (
     <main>

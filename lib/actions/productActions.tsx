@@ -22,6 +22,23 @@ export const GetAllProduct = async ()=> {
     }
 }
 
+export async function GetNewArrivals(){
+
+    try {
+        await connectToDb();
+        const newArrivals = await Product.find();
+        if(newArrivals) {
+            return JSON.parse(JSON.stringify(newArrivals))
+        }else{
+          return "no new arrivals found"
+        }
+        
+
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
 
 
 
