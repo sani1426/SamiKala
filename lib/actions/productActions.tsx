@@ -46,7 +46,7 @@ export const GetSimilarProducts = async (gender : string) => {
   try {
     await connectToDb()
 
-    const similarProducts = await Product.find({ gender: gender })
+    const similarProducts = await Product.find()
       .sort({ rating: -1 })
       .limit(4)
 
