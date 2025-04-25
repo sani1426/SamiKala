@@ -12,7 +12,7 @@ export const GetAllProduct = async ()=> {
         await connectToDb()
         
             const Products = await Product.find()
-            return  JSON.parse(JSON.stringify(Products)) 
+            return new  NextResponse(JSON.stringify(Products)) 
 
 
     } catch (error) {
@@ -28,9 +28,9 @@ export async function GetNewArrivals(){
         await connectToDb();
         const newArrivals = await Product.find().sort({createdAt : -1}).limit(8)
         if(newArrivals) {
-            return JSON.parse(JSON.stringify(newArrivals))
+            return new NextResponse(JSON.stringify(newArrivals))
         }else{
-          return "no new arrivals found"
+          return  new NextResponse("no new arrivals found")
         }
         
 
@@ -49,7 +49,7 @@ export const GetBestSeller = async () => {
 
         const bestSeller = await Product.findOne().sort({rating : -1})
 
-        return JSON.parse(JSON.stringify(bestSeller))
+        return new NextResponse(JSON.stringify(bestSeller))
     } catch (error) {
         console.log(error);
         

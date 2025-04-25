@@ -1,11 +1,12 @@
 import connectToDb from "@/lib/database/db";
 import Product from "@/lib/models/Product";
+import { NextResponse } from "next/server";
 
 export async function GET() {
     try {
         await connectToDb();
         const product= await Product.find();
-        return JSON.parse(JSON.stringify(product))
+        return new NextResponse(JSON.stringify(product))
     } catch (error) {
         console.log(error);
         
