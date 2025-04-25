@@ -7,7 +7,7 @@ export async function GET() {
     await connectToDb()
     const newArrivals = await Product.find()
     if (newArrivals) {
-      return new NextResponse(JSON.parse(JSON.stringify(newArrivals)))
+      return new NextResponse(JSON.stringify(newArrivals))
     } else {
       return new NextResponse('no new arrivals found')
     }
