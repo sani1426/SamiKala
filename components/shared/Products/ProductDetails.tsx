@@ -37,7 +37,7 @@ const ProductDetails = ({
 
   const [similar, setSimilar] = useState([])
   const getYouLikeProduct = async () => {
-    const product = await GetSimilarProducts({gender : "Men"})
+    const product = await GetSimilarProducts("Men")
     setSimilar(product)
   }
 

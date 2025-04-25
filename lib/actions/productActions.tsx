@@ -42,7 +42,7 @@ export const GetBestSeller = async () => {
   }
 }
 
-export const GetSimilarProducts = async ({gender} : {gender : string}) => {
+export const GetSimilarProducts = async (gender : string) => {
   try {
     await connectToDb()
 
