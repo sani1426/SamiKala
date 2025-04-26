@@ -14,8 +14,8 @@ const ProductGrid = ({ products }: { products: ProductType[] }) => {
                 className='w-full h-full object-cover rounded-lg  hover:opacity-0 transition-all duration-500'
               />
               <img
-                src={product.images[1].url}
-                alt={product.images[1].altText}
+                src={product.images[1]?.url}
+                alt={product.images[1]?.altText}
                 className='absolute top-0 w-full h-full object-cover rounded-lg  opacity-0 hover:opacity-[1] transition-all duration-500'
               />
             </div>
