@@ -20,9 +20,15 @@ const ProductGrid = ({ products }: { products: ProductType[] }) => {
               />
             </div>
             <h3 className='text-sm mb-2'>{product.name}</h3>
+            <div className='flex items-center justify-between'> 
             <p className='text-gray-500 dark:text-gray-400 font-medium text-sm tracking-tighter'>
               $ {product.price}
             </p>
+            <p className='text-gray-500 dark:text-gray-400 font-medium text-sm tracking-tighter'>
+              $ {product.gender}
+            </p>
+            </div>
+         
           </div>
         </Link>
       ))}
