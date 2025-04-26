@@ -1,4 +1,5 @@
-import { NextResponse } from 'next/server'
+'use server'
+
 import connectToDb from '../database/db'
 import Product from '../models/Product'
 
@@ -12,7 +13,7 @@ export const GetAllProduct = async () => {
     return JSON.parse(JSON.stringify(Products))
   } catch (error) {
     console.log(error)
-    return new NextResponse('Server Error')
+    return JSON.stringify('Server Error')
   }
 }
 
@@ -27,6 +28,7 @@ export async function GetNewArrivals() {
     }
   } catch (error) {
     console.log(error)
+    return JSON.stringify('Server Error')
   }
 }
 
@@ -39,25 +41,44 @@ export const GetBestSeller = async () => {
     return JSON.parse(JSON.stringify(bestSeller))
   } catch (error) {
     console.log(error)
+    return JSON.stringify('Server Error')
   }
 }
 
-export const GetSimilarProducts = async (productId : number) => {
+export const GetSimilarProducts = async (productId: number) => {
   try {
     await connectToDb()
 
-    const product  = await Product.findById(productId);
+    const product = await Product.findById(productId)
 
-    if(product) {
-        const similarProducts = await Product.find({gender : product.gender})
+    if (product) {
+      const similarProducts = await Product.find({ gender: product.gender })
         .sort({ rating: -1 })
-        .limit(4);
-        return JSON.parse(JSON.stringify(similarProducts))
-    }else{
-        return "product not find"
+        .limit(4)
+      return JSON.parse(JSON.stringify(similarProducts))
+    } else {
+      return 'product not find'
     }
-
   } catch (error) {
     console.log(error)
+    return JSON.stringify('Server Error')
+  }
+}
+
+type genderAndLimit = {
+  gender: string
+  limit: number
+}
+export const GetGenderCollecction = async (gender:string , limit:number) => {
+  try {
+    await connectToDb()
+
+    const products = await Product.find({ gender: gender })
+      .sort({ rating: -1 })
+      .limit(limit)
+    return JSON.parse(JSON.stringify(products))
+  } catch (error) {
+    console.log(error)
+    return JSON.stringify('Server Error')
   }
 }
