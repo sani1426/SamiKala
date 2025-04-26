@@ -5,21 +5,14 @@ import BestSeller from '@/section/BestSeller'
 import GenderTopWear from '@/section/GenderTopWear'
 import HeroSection from '@/section/HeroSection'
 
-
-
-
-export default  function Home() {
-
-
-
+export default function Home() {
   return (
     <main>
       <HeroSection />
       <GenderCollection />
       <NewArrivalSlider />
       <BestSeller />
-    <GenderTopWear />
-   
+      <GenderTopWear />
     </main>
   )
 }

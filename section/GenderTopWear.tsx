@@ -7,8 +7,8 @@ const GenderTopWear = async () => {
 
     const productsGender = await GetGenderCollecction("Women",8)
   return (
-    <section className="container mx-auto">
-        <h2 className="text-3xl text-center font-bold mb-4">
+    <section dir="ltr" className="container mx-auto py-16">
+        <h2 className="text-3xl text-center font-bold mb-8">
             Top Wears For Women
         </h2>
         <ProductGrid products ={productsGender} />
