@@ -1,5 +1,5 @@
 import ProductGrid from "@/components/shared/Products/ProductGrid"
-import { GetAllProduct } from "@/lib/actions/productActions"
+import { GetPaginating } from "@/lib/actions/productActions"
 import { ProductType } from "@/types/type"
 import { Metadata } from "next"
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Page = async () => {
 
-    const products:ProductType[] = await GetAllProduct()
+    const products:ProductType[] = await GetPaginating(2)
 
   return (
     <section className="pt-14 pb-24 px-8 md:px-12">
