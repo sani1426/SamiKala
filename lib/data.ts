@@ -1,31 +1,30 @@
 
 export const nav_link = [
-    {id : 1 , label : 'پوشاک' , href : '/wear'},
-    {id : 2 , label : 'لپتاپ' , href : '/laptop'},
-    {id : 3 , label : 'ابزار' , href : '/tools'},
-    {id : 4 , label : 'موبایل' , href : '/mobile'},
+    {id : 1 , label : 'All Products' , href : '/products'},
+    {id : 2 , label : 'Men Wear' , href : '/men-wear'},
+    {id : 3 , label : 'Women Wear' , href : '/women-wear'},
 ]
 
 export const items =  [
     {
-      title: 'جدید ترین کفش ها',
-      buttonCaption: 'مشاهده',
+      title: 'Perfect Mens Wear',
+      buttonCaption: 'see more',
       image: '/images/banner3.jpg',
-      url: '/wear',
+      url: '/men-wear',
       isPublished: true,
     },
     {
-      title: 'لباس های تابستانی',
-      buttonCaption: 'مشاهده',
+      title: 'perfect Womens Wear',
+      buttonCaption: 'see more',
       image: '/images/banner1.jpg',
       url: '/wear',
       isPublished: true,
     },
     {
-      title: 'ساعت های لوکس',
-      buttonCaption: 'مشاهده',
+      title: 'new products in mode',
+      buttonCaption: 'see more',
       image: '/images/banner2.jpg',
-      url: '/wear',
+      url: '/products',
       isPublished: true,
     },
   ]

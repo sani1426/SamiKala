@@ -10,6 +10,7 @@ import {
 import { GetNewArrivals } from '@/lib/actions/productActions'
 import { ProductType } from '@/types/type'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 
@@ -39,7 +40,8 @@ const NewArrivalItem: ProductType[] = await GetNewArrivals()
               key={product.name}
               className='md:basis-1/3 lg:basis-1/5'
             >
-              <div className='relative rounded-lg px-2 overflow-hidden'>
+         <Link href={`/products/${product._id}`} >
+         <div className='relative rounded-lg px-2 overflow-hidden'>
                 <Image
                   className='w-full h-full rounded-lg'
                   src={product.images[0].url}
@@ -53,6 +55,7 @@ const NewArrivalItem: ProductType[] = await GetNewArrivals()
                   <p className='text-white text-sm'>${product.price}</p>
                 </div>
               </div>
+         </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

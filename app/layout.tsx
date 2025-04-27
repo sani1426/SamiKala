@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='fa' dir='rtl' className='page-transition'>
+    <html lang='fa' dir='ltr' className='page-transition'>
       <body className={myFont.className}>
         <Layoutcomponent>{children}
         <Toaster  position="top-right" />

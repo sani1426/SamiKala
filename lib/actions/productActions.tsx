@@ -4,7 +4,7 @@ import connectToDb from '../database/db'
 import Product from '../models/Product'
 
 export const GetAllProduct = async () => {
-  await connectToDb()
+
 
   try {
     await connectToDb()
@@ -69,7 +69,7 @@ type genderAndLimit = {
   gender: string
   limit: number
 }
-export const GetGenderCollecction = async (gender:string , limit:number) => {
+export const GetGenderCollecction = async (gender: string, limit: number) => {
   try {
     await connectToDb()
 
@@ -77,6 +77,22 @@ export const GetGenderCollecction = async (gender:string , limit:number) => {
       .sort({ rating: -1 })
       .limit(limit)
     return JSON.parse(JSON.stringify(products))
+  } catch (error) {
+    console.log(error)
+    return JSON.stringify('Server Error')
+  }
+}
+
+
+
+
+export const GetProductDetails = async (id: number) => {
+  try {
+    await connectToDb()
+
+    const product = await Product.findById(id)
+
+    return JSON.parse(JSON.stringify(product))
   } catch (error) {
     console.log(error)
     return JSON.stringify('Server Error')
