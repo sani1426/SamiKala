@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Page = async () => {
 
-    const products:ProductType[] = await GetPaginating(2)
+    const products:ProductType[] = await GetPaginating(5)
 
   return (
     <section className="pt-14 pb-24 px-8 md:px-12">
