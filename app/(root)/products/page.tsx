@@ -13,8 +13,8 @@ const Page = async () => {
     const products:ProductType[] = await GetAllProduct()
 
   return (
-    <section className="py-16 px-4 md:px-8">
-      <h1 className="text-4xl mb-8 font-bold">All Products</h1>
+    <section className="pt-14 pb-24 px-8 md:px-12">
+      <h1 className="text-4xl mb-12 font-bold text-center">All Products</h1>
       <ProductGrid  products={products} />
     </section>
   )

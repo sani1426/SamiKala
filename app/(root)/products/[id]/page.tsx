@@ -18,7 +18,7 @@ const page = async ({
 
 
   return (
-    <section className="pt-3 pb-16 px-4 lg:px-0 bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-200">
+    <section className=" pb-16 px-4 lg:px-0 bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-200">
         <ProductDetails  SelectedProduct={product}  similarProducts={similarProducts}   />
     </section>
   )
