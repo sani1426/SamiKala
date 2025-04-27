@@ -11,7 +11,7 @@ const MobileSidebar = () => {
   return (
     <div
       className={` sidebar-mobile ${
-        sidebarOpen ? 'translate-x-full' : 'translate-x-0'
+        sidebarOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
       <div className='flex-between  p-4 mb-5'>
