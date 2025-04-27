@@ -14,7 +14,7 @@ type ProductDetailsPageParam = {
 
 const page = async (props: ProductDetailsPageProp) => {
 
-    const {id} = await props.params
+    const {id} = props.params
 
     const product:ProductType = await GetProductDetails(id);
 
