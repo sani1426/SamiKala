@@ -6,7 +6,7 @@ import localFont from 'next/font/local'
 import Layoutcomponent from '@/components/layout/layoutcomp'
 import { Toaster } from 'sonner'
 
-const myFont = localFont({ src: '../public/font/static/Vazirmatn-Medium.ttf' })
+const myFont = localFont({ src: '../public/poppins/Poppins-Medium.ttf' })
 
 export const metadata: Metadata = {
   title: {

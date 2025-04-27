@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/carousel'
 import { GetNewArrivals } from '@/lib/actions/productActions'
 import { ProductType } from '@/types/type'
+import Image from 'next/image'
 
 
 
@@ -39,10 +40,10 @@ const NewArrivalItem: ProductType[] = await GetNewArrivals()
               className='md:basis-1/3 lg:basis-1/5'
             >
               <div className='relative rounded-lg px-2 overflow-hidden'>
-                <img
+                <Image
                   className='w-full h-full rounded-lg'
                   src={product.images[0].url}
-                  alt={product.images[0].altText}
+                  alt={product.images[0].altText!}
                 />
                 <div
                   dir='ltr'
