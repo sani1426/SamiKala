@@ -11,7 +11,7 @@ const MobileSidebar = () => {
   return (
     <div
       className={` sidebar-mobile ${
-        sidebarOpen ? 'translate-x-0' : 'translate-x-full'
+        sidebarOpen ? 'translate-x-full' : 'translate-x-0'
       }`}
     >
       <div className='flex-between  p-4 mb-5'>
@@ -19,7 +19,7 @@ const MobileSidebar = () => {
          onClick={()=> setSidebarOpen(false)}
           className='text-2xl flex-center gap-2 text-primary' href='/'>
           <IoLogoAlipay />
-          <span className='font-beirut text-3xl font-bold'>سامی کالا</span>
+          <span className='font-beirut text-3xl font-bold'>Sami Kala</span>
         </Link>
 
         <button onClick={toggleSidebar}>

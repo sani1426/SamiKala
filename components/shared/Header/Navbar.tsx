@@ -27,7 +27,7 @@ const Navbar = () => {
         <div>
           <Link className='text-2xl flex-center gap-2 text-primary' href='/'>
             <IoLogoAlipay />
-            <span className='font-beirut text-3xl font-bold'>سامی کالا</span>
+            <span className='font-beirut text-3xl font-bold'>Sami Kala</span>
           </Link>
         </div>
 
