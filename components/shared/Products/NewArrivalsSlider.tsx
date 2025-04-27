@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/carousel'
 import { GetNewArrivals } from '@/lib/actions/productActions'
 import { ProductType } from '@/types/type'
-import Image from 'next/image'
+
 import Link from 'next/link'
 
 
@@ -42,7 +42,7 @@ const NewArrivalItem: ProductType[] = await GetNewArrivals()
             >
          <Link href={`/products/${product._id}`} >
          <div className='relative rounded-lg px-2 overflow-hidden'>
-                <Image
+                <img
                   className='w-full h-full rounded-lg'
                   src={product.images[0].url}
                   alt={product.images[0].altText!}
