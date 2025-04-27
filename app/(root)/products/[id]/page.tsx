@@ -3,12 +3,18 @@ import { GetProductDetails, GetSimilarProducts } from "@/lib/actions/productActi
 import { ProductType } from "@/types/type";
 
 
+type ProductDetailsPageProp = {
+  params: ProductDetailsPageParam;
+};
+
+type ProductDetailsPageParam = {
+  id: number;
+};
 
 
+const page = async (props: ProductDetailsPageProp) => {
 
-const page = async ({params}:{params : {id : number}}) => {
-
-    const {id} = await params
+    const {id} = await props.params
 
     const product:ProductType = await GetProductDetails(id);
 
