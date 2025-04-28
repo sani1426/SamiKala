@@ -49,22 +49,35 @@ const Page =  () => {
       <Pagination>
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#"  onClick={()=>setPageNumber(pageNumber - 1)} />
+            <PaginationPrevious href="#"  onClick={() => {
+              if(pageNumber > 2){ setPageNumber(pageNumber -1)}
+            }} />
           </PaginationItem>
-          <PaginationItem className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(1)}>
-           1
+          <PaginationItem  >
+            <button onClick={()=>setPageNumber(1)}>
+            1
+            </button>
+          
           </PaginationItem>
-          <PaginationItem className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(2)}>
-           2
+          <PaginationItem  >
+          <button className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(2)}>
+            2
+            </button>
           </PaginationItem>
-          <PaginationItem className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(3)}>
-           3
+          <PaginationItem  >
+          <button className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(3)}>
+            3
+            </button>
           </PaginationItem>
-          <PaginationItem className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(4)}>
-           4
+          <PaginationItem  >
+          <button className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(4)}>
+            4
+            </button>
           </PaginationItem>
           <PaginationItem>
-            <PaginationNext onClick={()=>setPageNumber(pageNumber + 1)}/>
+            <PaginationNext onClick={() => {
+              if(pageNumber < 3){ setPageNumber(pageNumber + 1)}
+            }}/>
           </PaginationItem>
         </PaginationContent>
       </Pagination>
