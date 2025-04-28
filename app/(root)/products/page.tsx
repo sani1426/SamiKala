@@ -17,6 +17,7 @@ import { GetPaginating } from "@/lib/actions/productActions"
 import { ProductType } from "@/types/type"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 
 
@@ -54,28 +55,28 @@ const Page =  () => {
             }} />
           </PaginationItem>
           <PaginationItem  >
-            <button onClick={()=>setPageNumber(1)}>
+            <Link href="#" className="px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl" onClick={()=>setPageNumber(1)}>
             1
-            </button>
+            </Link>
           
           </PaginationItem>
           <PaginationItem  >
-          <button className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(2)}>
+          <Link href="#" className="px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl"  onClick={()=>setPageNumber(2)}>
             2
-            </button>
+            </Link>
           </PaginationItem>
           <PaginationItem  >
-          <button className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(3)}>
+          <Link href="#" className="px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl"  onClick={()=>setPageNumber(3)}>
             3
-            </button>
+            </Link>
           </PaginationItem>
           <PaginationItem  >
-          <button className="cursor-pointer hover:shadow-lg" onClick={()=>setPageNumber(4)}>
+          <Link href="#" className="px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl"  onClick={()=>setPageNumber(4)}>
             4
-            </button>
+            </Link>
           </PaginationItem>
           <PaginationItem>
-            <PaginationNext onClick={() => {
+            <PaginationNext href="#" onClick={() => {
               if(pageNumber < 3){ setPageNumber(pageNumber + 1)}
             }}/>
           </PaginationItem>
