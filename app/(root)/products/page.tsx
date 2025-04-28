@@ -50,7 +50,7 @@ const Page =  () => {
       <Pagination>
         <PaginationContent>
           <PaginationItem>
-            <Link  className={`px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl  ${pageNumber >2 ? "opacity-50 cursor-not-allowed" : ""}`} href="#"  onClick={() => {
+            <Link  className={`px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl  ${pageNumber <3 ? "opacity-50 cursor-not-allowed" : ""}`} href="#"  onClick={() => {
               if(pageNumber > 2){ setPageNumber(pageNumber -1)}
             }} >Previous</Link>
           </PaginationItem>
@@ -77,7 +77,7 @@ const Page =  () => {
           </PaginationItem>
           <PaginationItem>
             <Link
-            className={`px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl  ${pageNumber <3 ? "opacity-50 cursor-not-allowed" : ""}`}
+            className={`px-4 py-2 border flex items-center justify-center shadow-sm hover:shadow-lg text-xl  ${pageNumber >2 ? "opacity-50 cursor-not-allowed" : ""}`}
             href="#" onClick={() => {
               if(pageNumber < 3){ setPageNumber(pageNumber + 1)}
             }}>Next</Link>
