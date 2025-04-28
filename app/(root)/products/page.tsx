@@ -3,7 +3,7 @@
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
+
   PaginationItem,
  
   PaginationNext,
@@ -12,7 +12,7 @@ import {
 
 
 import ProductGrid from "@/components/shared/Products/ProductGrid"
-import PageHandling from "@/components/shared/pagination"
+
 import { GetPaginating } from "@/lib/actions/productActions"
 import { ProductType } from "@/types/type"
 import { Metadata } from "next"
