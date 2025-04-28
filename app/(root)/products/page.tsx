@@ -1,4 +1,5 @@
 import ProductGrid from "@/components/shared/Products/ProductGrid"
+import PageHandling from "@/components/shared/pagination"
 import { GetPaginating } from "@/lib/actions/productActions"
 import { ProductType } from "@/types/type"
 import { Metadata } from "next"
@@ -16,6 +17,7 @@ const Page = async () => {
     <section className="pt-14 pb-24 px-8 md:px-12">
       <h1 className="text-4xl mb-12 font-bold text-center">All Products</h1>
       <ProductGrid  products={products} />
+      <PageHandling />
     </section>
   )
 }
