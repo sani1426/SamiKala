@@ -33,10 +33,10 @@ const Page =  () => {
 
   setProduct(productelem)
 
-  getData()
+ 
  }
+ getData()
   
-
   }, [pageNumber])
   
  
