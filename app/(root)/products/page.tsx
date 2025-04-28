@@ -15,13 +15,11 @@ import ProductGrid from "@/components/shared/Products/ProductGrid"
 
 import { GetPaginating } from "@/lib/actions/productActions"
 import { ProductType } from "@/types/type"
-import { Metadata } from "next"
+
 import { useEffect, useState } from "react"
 
 
-export const metadata: Metadata = {
-  title: "products"
-}
+
 
 const Page =  () => {
 
